@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <data name="InvalidActs" xml:space="preserve"><value>骏大祭演目数据无效：育成 {0}，回合 {1}。请保留对应响应以核对演目类型、等级及槽值。</value></data>
+  <data name="MissingField" xml:space="preserve"><value>骏大祭响应缺少必要字段：{0}。</value></data>
+  <data name="AmbiguousHome" xml:space="preserve"><value>骏大祭训练命令存在歧义：回合 {0}，基础命令 {1}，不能确定唯一训练命令。</value></data>
+  <data name="AmbiguousScenario" xml:space="preserve"><value>骏大祭剧本增量存在歧义：回合 {0}，基础命令 {1} 对应多条剧本命令。</value></data>
+  <data name="TrainingLevel" xml:space="preserve"><value>骏大祭训练等级缺失或重复：回合 {0}，命令 {1}。</value></data>
+  <data name="UnmappedPartner" xml:space="preserve"><value>未映射角色（target_id={0}）</value></data>
+  <data name="WrongScenario" xml:space="preserve"><value>骏大祭接口返回了其他剧本：scenario_id={0}，育成 {1}。</value></data>
+  <data name="DisplayMissing" xml:space="preserve"><value>骏大祭历史记录不存在：育成 {0}，回合 {1}。</value></data>
+  <data name="MissingAdvice" xml:space="preserve"><value>育成 {0} 第 {1} 回合的演目 {2} 装备教诲 {3}，但 advice_info_array 缺少该记录，无法确定转成附效。</value></data>
+</root>

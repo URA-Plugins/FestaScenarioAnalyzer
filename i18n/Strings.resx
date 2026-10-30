@@ -1,0 +1,171 @@
+<?xml version='1.0' encoding='utf-8'?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms</value>
+  </resheader>
+  <data name="HistoryCannotRetain" xml:space="preserve">
+    <value>{0} 无法保留历史记录：{1}。</value>
+  </data>
+  <data name="HistoryUnread" xml:space="preserve">
+    <value>有新的训练历史。按 → 查看最新。</value>
+  </data>
+  <data name="HistoryNoUiSession" xml:space="preserve">
+    <value>{0} 无法从非界面线程启动配置：当前没有正在运行的 Terminal.Gui 会话。</value>
+  </data>
+  <data name="HistoryCannotShowRetained" xml:space="preserve">
+    <value>{0} 无法显示保留的历史记录：{1}。</value>
+  </data>
+  <data name="HistoryPosition" xml:space="preserve">
+    <value>训练历史 {0}/{1}</value>
+  </data>
+  <data name="HistoryCannotShowSelected" xml:space="preserve">
+    <value>{0} 无法显示选中的历史记录：{1}。</value>
+  </data>
+  <data name="HistoryNotInitialized" xml:space="preserve">
+    <value>{0} 尚未初始化。</value>
+  </data>
+  <data name="HistoryNullSettings" xml:space="preserve">
+    <value>配置内容为 null。</value>
+  </data>
+  <data name="HistoryInvalidSettings" xml:space="preserve">
+    <value>FestaScenarioAnalyzer 配置文件无效：{0}。{1}</value>
+  </data>
+  <data name="HistoryInvalidLimit" xml:space="preserve">
+    <value>FestaScenarioAnalyzer historyLimit 必须在 0 到 {0} 之间：{1}，实际值 {2}。</value>
+  </data>
+  <data name="SettingsTitle" xml:space="preserve">
+    <value>骏大祭分析配置</value>
+  </data>
+  <data name="HistoryLimitLabel" xml:space="preserve">
+    <value>历史记录上限（0–{0}）</value>
+  </data>
+  <data name="HistoryLimitValidation" xml:space="preserve">
+    <value>历史记录上限必须是 0 到 {0} 之间的整数。</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>保存</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>取消</value>
+  </data>
+  <data name="SettingsCancelled" xml:space="preserve">
+    <value>骏大祭分析配置已取消。</value>
+  </data>
+  <data name="Date" xml:space="preserve">
+    <value>{0}年 {1}月{2} · 第{3}回合</value>
+  </data>
+  <data name="FirstHalf" xml:space="preserve">
+    <value>前半</value>
+  </data>
+  <data name="SecondHalf" xml:space="preserve">
+    <value>后半</value>
+  </data>
+  <data name="TotalStats" xml:space="preserve">
+    <value>五围 {0} · Pt {1}</value>
+  </data>
+  <data name="Motivation1" xml:space="preserve">
+    <value>绝不调</value>
+  </data>
+  <data name="Motivation2" xml:space="preserve">
+    <value>不调</value>
+  </data>
+  <data name="Motivation3" xml:space="preserve">
+    <value>普通</value>
+  </data>
+  <data name="Motivation4" xml:space="preserve">
+    <value>好调</value>
+  </data>
+  <data name="Motivation5" xml:space="preserve">
+    <value>绝好调</value>
+  </data>
+  <data name="NoTraining" xml:space="preserve">
+    <value>本次响应没有完整训练信息</value>
+  </data>
+  <data name="TrainingTitle" xml:space="preserve">
+    <value>{0}</value>
+  </data>
+  <data name="ActTrainingTitle" xml:space="preserve">
+    <value>{0}稽古</value>
+  </data>
+  <data name="Stat0" xml:space="preserve">
+    <value>速度</value>
+  </data>
+  <data name="Stat1" xml:space="preserve">
+    <value>耐力</value>
+  </data>
+  <data name="Stat2" xml:space="preserve">
+    <value>力量</value>
+  </data>
+  <data name="Stat3" xml:space="preserve">
+    <value>根性</value>
+  </data>
+  <data name="Stat4" xml:space="preserve">
+    <value>智力</value>
+  </data>
+  <data name="CampRemaining" xml:space="preserve">
+    <value>合宿剩余 {0} 回合</value>
+  </data>
+  <data name="ActLevelGap" xml:space="preserve">
+    <value>{0}差{1}级</value>
+  </data>
+  <data name="NextCheckpoint" xml:space="preserve">
+    <value>第{0}回合目标：全演目Lv{1} · {2}</value>
+  </data>
+  <data name="ListSeparator" xml:space="preserve">
+    <value>、</value>
+  </data>
+  <data name="GaugeOverflow" xml:space="preserve">
+    <value>本次事件存在演目槽溢出</value>
+  </data>
+  <data name="LevelOverflow" xml:space="preserve">
+    <value>本次事件存在演目等级溢出</value>
+  </data>
+  <data name="NotLevelUpActs" xml:space="preserve">
+    <value>本次未升级演目：{0}</value>
+  </data>
+  <data name="TrainingUnavailable" xml:space="preserve">
+    <value>当前不可执行</value>
+  </data>
+  <data name="TrainingPt" xml:space="preserve">
+    <value>|Pt:{0}</value>
+  </data>
+  <data name="FailureRate" xml:space="preserve">
+    <value>({0}%)</value>
+  </data>
+  <data name="GaugeGain" xml:space="preserve">
+    <value>{0}{1:+0;-0;0}</value>
+  </data>
+  <data name="PartnerFriendship" xml:space="preserve">
+    <value> {0}</value>
+  </data>
+  <data name="DateTurnOnly" xml:space="preserve">
+    <value>第{0}回合</value>
+  </data>
+  <data name="CurrentRemainStat" xml:space="preserve">
+    <value>当前:可获得</value>
+  </data>
+  <data name="CurrentStatValue" xml:space="preserve">
+    <value>{0}:</value>
+  </data>
+  <data name="VitalLabel" xml:space="preserve">
+    <value>体力:</value>
+  </data>
+  <data name="VitalLimit" xml:space="preserve">
+    <value>/{0}</value>
+  </data>
+  <data name="TrainingLevel" xml:space="preserve">
+    <value>Lv{0}</value>
+  </data>
+  <data name="TrainingGainLabel" xml:space="preserve">
+    <value>属:</value>
+  </data>
+</root>

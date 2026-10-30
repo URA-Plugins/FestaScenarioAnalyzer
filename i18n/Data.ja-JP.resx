@@ -1,0 +1,718 @@
+<?xml version='1.0' encoding='utf-8'?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms</value>
+  </resheader>
+  <data name="Act_1" xml:space="preserve">
+    <value>流鏑馬</value>
+  </data>
+  <data name="Act_2" xml:space="preserve">
+    <value>神旗争奪戦</value>
+  </data>
+  <data name="Act_3" xml:space="preserve">
+    <value>納舞</value>
+  </data>
+  <data name="Act_4" xml:space="preserve">
+    <value>大曳神輿</value>
+  </data>
+  <data name="Act_5" xml:space="preserve">
+    <value>飛駆</value>
+  </data>
+  <data name="Advice_101" xml:space="preserve">
+    <value>絆の教え</value>
+  </data>
+  <data name="Advice_201" xml:space="preserve">
+    <value>得意率の教え</value>
+  </data>
+  <data name="Advice_301" xml:space="preserve">
+    <value>ヒントの教え</value>
+  </data>
+  <data name="Advice_401" xml:space="preserve">
+    <value>助力の教え</value>
+  </data>
+  <data name="Advice_501" xml:space="preserve">
+    <value>体力の教え</value>
+  </data>
+  <data name="Advice_601" xml:space="preserve">
+    <value>特化の教え</value>
+  </data>
+  <data name="Advice_701" xml:space="preserve">
+    <value>研鑽の教え</value>
+  </data>
+  <data name="Advice_801" xml:space="preserve">
+    <value>協力の教え</value>
+  </data>
+  <data name="Advice_901" xml:space="preserve">
+    <value>不屈の教え</value>
+  </data>
+  <data name="Advice_1001" xml:space="preserve">
+    <value>両道の教え</value>
+  </data>
+  <data name="AdviceEffect_1" xml:space="preserve">
+    <value>トレーニング時に全編成サポートカードの絆ゲージ +3
+（効果は重複しない）
+演目稽古でメイン基礎能力の獲得量アップ 3%</value>
+  </data>
+  <data name="AdviceEffect_3" xml:space="preserve">
+    <value>トレーニング時に全編成サポートカードの絆ゲージ +3
+（効果は重複しない）
+演目稽古でメイン基礎能力の獲得量アップ 5%</value>
+  </data>
+  <data name="AdviceEffect_5" xml:space="preserve">
+    <value>トレーニング時に全編成サポートカードの絆ゲージ +3
+（効果は重複しない）
+演目稽古でメイン基礎能力の獲得量アップ 7%</value>
+  </data>
+  <data name="AdviceEffect_7" xml:space="preserve">
+    <value>トレーニング時に全編成サポートカードの絆ゲージ +3
+（効果は重複しない）
+演目稽古でメイン基礎能力の獲得量アップ 9%</value>
+  </data>
+  <data name="AdviceEffect_9" xml:space="preserve">
+    <value>トレーニング時に全編成サポートカードの絆ゲージ +3
+（効果は重複しない）
+演目稽古でメイン基礎能力の獲得量アップ 10%</value>
+  </data>
+  <data name="AdviceEffect_11" xml:space="preserve">
+    <value>トレーニング時に全編成サポートカードの絆ゲージ +3
+（効果は重複しない）
+演目稽古でメイン基礎能力の獲得量アップ 11%</value>
+  </data>
+  <data name="AdviceEffect_13" xml:space="preserve">
+    <value>トレーニング時に全編成サポートカードの絆ゲージ +3
+（効果は重複しない）
+演目稽古でメイン基礎能力の獲得量アップ 12%</value>
+  </data>
+  <data name="AdviceEffect_15" xml:space="preserve">
+    <value>トレーニング時に全編成サポートカードの絆ゲージ +3
+（効果は重複しない）
+演目稽古でメイン基礎能力の獲得量アップ 13%</value>
+  </data>
+  <data name="AdviceEffect_17" xml:space="preserve">
+    <value>トレーニング時に全編成サポートカードの絆ゲージ +3
+（効果は重複しない）
+演目稽古でメイン基礎能力の獲得量アップ 14%</value>
+  </data>
+  <data name="AdviceEffect_19" xml:space="preserve">
+    <value>トレーニング時に全編成サポートカードの絆ゲージ +3
+（効果は重複しない）
+演目稽古でメイン基礎能力の獲得量アップ 15%</value>
+  </data>
+  <data name="AdviceEffect_21" xml:space="preserve">
+    <value>得意率アップ 10</value>
+  </data>
+  <data name="AdviceEffect_22" xml:space="preserve">
+    <value>得意率アップ 13</value>
+  </data>
+  <data name="AdviceEffect_23" xml:space="preserve">
+    <value>得意率アップ 16</value>
+  </data>
+  <data name="AdviceEffect_24" xml:space="preserve">
+    <value>得意率アップ 20</value>
+  </data>
+  <data name="AdviceEffect_25" xml:space="preserve">
+    <value>得意率アップ 25</value>
+  </data>
+  <data name="AdviceEffect_26" xml:space="preserve">
+    <value>得意率アップ 30</value>
+  </data>
+  <data name="AdviceEffect_27" xml:space="preserve">
+    <value>得意率アップ 35</value>
+  </data>
+  <data name="AdviceEffect_28" xml:space="preserve">
+    <value>得意率アップ 40</value>
+  </data>
+  <data name="AdviceEffect_29" xml:space="preserve">
+    <value>得意率アップ 45</value>
+  </data>
+  <data name="AdviceEffect_30" xml:space="preserve">
+    <value>得意率アップ 50</value>
+  </data>
+  <data name="AdviceEffect_31" xml:space="preserve">
+    <value>ヒント発生率アップ 30%</value>
+  </data>
+  <data name="AdviceEffect_32" xml:space="preserve">
+    <value>ヒント発生率アップ 33%</value>
+  </data>
+  <data name="AdviceEffect_33" xml:space="preserve">
+    <value>ヒント発生率アップ 36%</value>
+  </data>
+  <data name="AdviceEffect_34" xml:space="preserve">
+    <value>ヒント発生率アップ 40%</value>
+  </data>
+  <data name="AdviceEffect_35" xml:space="preserve">
+    <value>ヒント発生率アップ 45%</value>
+  </data>
+  <data name="AdviceEffect_36" xml:space="preserve">
+    <value>ヒント発生率アップ 50%</value>
+  </data>
+  <data name="AdviceEffect_37" xml:space="preserve">
+    <value>ヒント発生率アップ 55%</value>
+  </data>
+  <data name="AdviceEffect_38" xml:space="preserve">
+    <value>ヒント発生率アップ 60%</value>
+  </data>
+  <data name="AdviceEffect_39" xml:space="preserve">
+    <value>ヒント発生率アップ 70%</value>
+  </data>
+  <data name="AdviceEffect_40" xml:space="preserve">
+    <value>ヒント発生率アップ 80%</value>
+  </data>
+  <data name="AdviceEffect_41" xml:space="preserve">
+    <value>友情非発生時にトレーニング効果アップ 20%
+演目稽古で 「助力の支え」を獲得
+（3回までトレーニング効果アップ 5%）</value>
+  </data>
+  <data name="AdviceEffect_43" xml:space="preserve">
+    <value>友情非発生時にトレーニング効果アップ 22%
+演目稽古で 「助力の支え」を獲得
+（3回までトレーニング効果アップ 5%）</value>
+  </data>
+  <data name="AdviceEffect_45" xml:space="preserve">
+    <value>友情非発生時にトレーニング効果アップ 24%
+演目稽古で 「助力の支え」を獲得
+（3回までトレーニング効果アップ 5%）</value>
+  </data>
+  <data name="AdviceEffect_47" xml:space="preserve">
+    <value>友情非発生時にトレーニング効果アップ 26%
+演目稽古で 「助力の支え」を獲得
+（3回までトレーニング効果アップ 5%）</value>
+  </data>
+  <data name="AdviceEffect_49" xml:space="preserve">
+    <value>友情非発生時にトレーニング効果アップ 28%
+演目稽古で 「助力の支え」を獲得
+（3回までトレーニング効果アップ 5%）</value>
+  </data>
+  <data name="AdviceEffect_51" xml:space="preserve">
+    <value>友情非発生時にトレーニング効果アップ 30%
+演目稽古で 「助力の支え」を獲得
+（3回までトレーニング効果アップ 5%）</value>
+  </data>
+  <data name="AdviceEffect_53" xml:space="preserve">
+    <value>友情非発生時にトレーニング効果アップ 32%
+演目稽古で 「助力の支え」を獲得
+（3回までトレーニング効果アップ 5%）</value>
+  </data>
+  <data name="AdviceEffect_55" xml:space="preserve">
+    <value>友情非発生時にトレーニング効果アップ 34%
+演目稽古で 「助力の支え」を獲得
+（3回までトレーニング効果アップ 5%）</value>
+  </data>
+  <data name="AdviceEffect_57" xml:space="preserve">
+    <value>友情非発生時にトレーニング効果アップ 37%
+演目稽古で 「助力の支え」を獲得
+（3回までトレーニング効果アップ 5%）</value>
+  </data>
+  <data name="AdviceEffect_59" xml:space="preserve">
+    <value>友情非発生時にトレーニング効果アップ 40%
+演目稽古で 「助力の支え」を獲得
+（3回までトレーニング効果アップ 5%）</value>
+  </data>
+  <data name="AdviceEffect_61" xml:space="preserve">
+    <value>体力消費ダウン 1%</value>
+  </data>
+  <data name="AdviceEffect_62" xml:space="preserve">
+    <value>体力消費ダウン 2%</value>
+  </data>
+  <data name="AdviceEffect_63" xml:space="preserve">
+    <value>体力消費ダウン 3%</value>
+  </data>
+  <data name="AdviceEffect_64" xml:space="preserve">
+    <value>体力消費ダウン 4%</value>
+  </data>
+  <data name="AdviceEffect_65" xml:space="preserve">
+    <value>体力消費ダウン 5%</value>
+  </data>
+  <data name="AdviceEffect_66" xml:space="preserve">
+    <value>体力消費ダウン 6%</value>
+  </data>
+  <data name="AdviceEffect_67" xml:space="preserve">
+    <value>体力消費ダウン 8%</value>
+  </data>
+  <data name="AdviceEffect_68" xml:space="preserve">
+    <value>体力消費ダウン 10%</value>
+  </data>
+  <data name="AdviceEffect_69" xml:space="preserve">
+    <value>体力消費ダウン 12%</value>
+  </data>
+  <data name="AdviceEffect_70" xml:space="preserve">
+    <value>体力消費ダウン 15%</value>
+  </data>
+  <data name="AdviceEffect_71" xml:space="preserve">
+    <value>メイン基礎能力の獲得量アップ 5%
+基礎能力の獲得上限 +5</value>
+  </data>
+  <data name="AdviceEffect_73" xml:space="preserve">
+    <value>メイン基礎能力の獲得量アップ 6%
+基礎能力の獲得上限 +6</value>
+  </data>
+  <data name="AdviceEffect_75" xml:space="preserve">
+    <value>メイン基礎能力の獲得量アップ 7%
+基礎能力の獲得上限 +7</value>
+  </data>
+  <data name="AdviceEffect_77" xml:space="preserve">
+    <value>メイン基礎能力の獲得量アップ 8%
+基礎能力の獲得上限 +8</value>
+  </data>
+  <data name="AdviceEffect_79" xml:space="preserve">
+    <value>メイン基礎能力の獲得量アップ 9%
+基礎能力の獲得上限 +9</value>
+  </data>
+  <data name="AdviceEffect_81" xml:space="preserve">
+    <value>メイン基礎能力の獲得量アップ 10%
+基礎能力の獲得上限 +10</value>
+  </data>
+  <data name="AdviceEffect_83" xml:space="preserve">
+    <value>メイン基礎能力の獲得量アップ 13%
+基礎能力の獲得上限 +13</value>
+  </data>
+  <data name="AdviceEffect_85" xml:space="preserve">
+    <value>メイン基礎能力の獲得量アップ 16%
+基礎能力の獲得上限 +16</value>
+  </data>
+  <data name="AdviceEffect_87" xml:space="preserve">
+    <value>メイン基礎能力の獲得量アップ 20%
+基礎能力の獲得上限 +20</value>
+  </data>
+  <data name="AdviceEffect_89" xml:space="preserve">
+    <value>メイン基礎能力の獲得量アップ 25%
+基礎能力の獲得上限 +25</value>
+  </data>
+  <data name="AdviceEffect_91" xml:space="preserve">
+    <value>演目担当が参加しているトレーニングで
+イベント「追加の稽古」の発生率 20%</value>
+  </data>
+  <data name="AdviceEffect_92" xml:space="preserve">
+    <value>演目担当が参加しているトレーニングで
+イベント「追加の稽古」の発生率 22%</value>
+  </data>
+  <data name="AdviceEffect_93" xml:space="preserve">
+    <value>演目担当が参加しているトレーニングで
+イベント「追加の稽古」の発生率 24%</value>
+  </data>
+  <data name="AdviceEffect_94" xml:space="preserve">
+    <value>演目担当が参加しているトレーニングで
+イベント「追加の稽古」の発生率 27%</value>
+  </data>
+  <data name="AdviceEffect_95" xml:space="preserve">
+    <value>演目担当が参加しているトレーニングで
+イベント「追加の稽古」の発生率 30%</value>
+  </data>
+  <data name="AdviceEffect_96" xml:space="preserve">
+    <value>演目担当が参加しているトレーニングで
+イベント「追加の稽古」の発生率 35%</value>
+  </data>
+  <data name="AdviceEffect_97" xml:space="preserve">
+    <value>演目担当が参加しているトレーニングで
+イベント「追加の稽古」の発生率 40%</value>
+  </data>
+  <data name="AdviceEffect_98" xml:space="preserve">
+    <value>演目担当が参加しているトレーニングで
+イベント「追加の稽古」の発生率 50%</value>
+  </data>
+  <data name="AdviceEffect_99" xml:space="preserve">
+    <value>演目担当が参加しているトレーニングで
+イベント「追加の稽古」の発生率 65%</value>
+  </data>
+  <data name="AdviceEffect_100" xml:space="preserve">
+    <value>演目担当が参加しているトレーニングで
+イベント「追加の稽古」の発生率 80%</value>
+  </data>
+  <data name="AdviceEffect_101" xml:space="preserve">
+    <value>友情ボーナス 1%
+演目担当の編成サポートカードが
+追加でランダムな1箇所のトレーニングに現れる</value>
+  </data>
+  <data name="AdviceEffect_103" xml:space="preserve">
+    <value>友情ボーナス 2%
+演目担当の編成サポートカードが
+追加でランダムな1箇所のトレーニングに現れる</value>
+  </data>
+  <data name="AdviceEffect_105" xml:space="preserve">
+    <value>友情ボーナス 3%
+演目担当の編成サポートカードが
+追加でランダムな1箇所のトレーニングに現れる</value>
+  </data>
+  <data name="AdviceEffect_107" xml:space="preserve">
+    <value>友情ボーナス 4%
+演目担当の編成サポートカードが
+追加でランダムな1箇所のトレーニングに現れる</value>
+  </data>
+  <data name="AdviceEffect_109" xml:space="preserve">
+    <value>友情ボーナス 5%
+演目担当の編成サポートカードが
+追加でランダムな1箇所のトレーニングに現れる</value>
+  </data>
+  <data name="AdviceEffect_111" xml:space="preserve">
+    <value>友情ボーナス 6%
+演目担当の編成サポートカードが
+追加でランダムな1箇所のトレーニングに現れる</value>
+  </data>
+  <data name="AdviceEffect_113" xml:space="preserve">
+    <value>友情ボーナス 7%
+演目担当の編成サポートカードが
+追加でランダムな1箇所のトレーニングに現れる</value>
+  </data>
+  <data name="AdviceEffect_115" xml:space="preserve">
+    <value>友情ボーナス 8%
+演目担当の編成サポートカードが
+追加でランダムな1箇所のトレーニングに現れる</value>
+  </data>
+  <data name="AdviceEffect_117" xml:space="preserve">
+    <value>友情ボーナス 9%
+演目担当の編成サポートカードが
+追加でランダムな1箇所のトレーニングに現れる</value>
+  </data>
+  <data name="AdviceEffect_119" xml:space="preserve">
+    <value>友情ボーナス 10%
+演目担当の編成サポートカードが
+追加でランダムな1箇所のトレーニングに現れる</value>
+  </data>
+  <data name="AdviceEffect_121" xml:space="preserve">
+    <value>体力が45以上なら失敗率ダウン 100%</value>
+  </data>
+  <data name="AdviceEffect_122" xml:space="preserve">
+    <value>体力が40以上なら失敗率ダウン 100%</value>
+  </data>
+  <data name="AdviceEffect_123" xml:space="preserve">
+    <value>体力が35以上なら失敗率ダウン 100%</value>
+  </data>
+  <data name="AdviceEffect_124" xml:space="preserve">
+    <value>体力が30以上なら失敗率ダウン 100%</value>
+  </data>
+  <data name="AdviceEffect_125" xml:space="preserve">
+    <value>体力が25以上なら失敗率ダウン 100%</value>
+  </data>
+  <data name="AdviceEffect_126" xml:space="preserve">
+    <value>体力が20以上なら失敗率ダウン 100%</value>
+  </data>
+  <data name="AdviceEffect_127" xml:space="preserve">
+    <value>体力が15以上なら失敗率ダウン 100%</value>
+  </data>
+  <data name="AdviceEffect_128" xml:space="preserve">
+    <value>体力が10以上なら失敗率ダウン 100%
+演目稽古のトレーニング効果アップ 1%</value>
+  </data>
+  <data name="AdviceEffect_130" xml:space="preserve">
+    <value>体力が5以上なら失敗率ダウン 100%
+演目稽古のトレーニング効果アップ 3%</value>
+  </data>
+  <data name="AdviceEffect_132" xml:space="preserve">
+    <value>失敗率ダウン 100%
+演目稽古のトレーニング効果アップ 5%</value>
+  </data>
+  <data name="AdviceEffect_134" xml:space="preserve">
+    <value>サブ基礎能力の獲得量アップ 1%
+演目稽古のトレーニング効果アップ 1%</value>
+  </data>
+  <data name="AdviceEffect_136" xml:space="preserve">
+    <value>サブ基礎能力の獲得量アップ 2%
+演目稽古のトレーニング効果アップ 2%</value>
+  </data>
+  <data name="AdviceEffect_138" xml:space="preserve">
+    <value>サブ基礎能力の獲得量アップ 3%
+演目稽古のトレーニング効果アップ 3%</value>
+  </data>
+  <data name="AdviceEffect_140" xml:space="preserve">
+    <value>サブ基礎能力の獲得量アップ 4%
+演目稽古のトレーニング効果アップ 4%</value>
+  </data>
+  <data name="AdviceEffect_142" xml:space="preserve">
+    <value>サブ基礎能力の獲得量アップ 5%
+演目稽古のトレーニング効果アップ 5%</value>
+  </data>
+  <data name="AdviceEffect_144" xml:space="preserve">
+    <value>サブ基礎能力の獲得量アップ 8%
+演目稽古のトレーニング効果アップ 7%</value>
+  </data>
+  <data name="AdviceEffect_146" xml:space="preserve">
+    <value>サブ基礎能力の獲得量アップ 11%
+演目稽古のトレーニング効果アップ 9%</value>
+  </data>
+  <data name="AdviceEffect_148" xml:space="preserve">
+    <value>サブ基礎能力の獲得量アップ 15%
+演目稽古のトレーニング効果アップ 11%</value>
+  </data>
+  <data name="AdviceEffect_150" xml:space="preserve">
+    <value>サブ基礎能力の獲得量アップ 20%
+演目稽古のトレーニング効果アップ 13%</value>
+  </data>
+  <data name="AdviceEffect_152" xml:space="preserve">
+    <value>サブ基礎能力の獲得量アップ 25%
+演目稽古のトレーニング効果アップ 15%</value>
+  </data>
+  <data name="FusionEffect_1" xml:space="preserve">
+    <value>演目稽古でメイン基礎能力の獲得量アップ 15%
+合宿中に演目担当の編成サポートカードから
+追加で1人トレーニングに現れる</value>
+  </data>
+  <data name="FusionEffect_3" xml:space="preserve">
+    <value>得意率アップ 50
+演目稽古の友情ボーナス 10%</value>
+  </data>
+  <data name="FusionEffect_5" xml:space="preserve">
+    <value>ヒント発生率アップ 80%
+演目稽古のヒントイベントで獲得するヒント +1</value>
+  </data>
+  <data name="FusionEffect_7" xml:space="preserve">
+    <value>友情非発生時にトレーニング効果アップ 20%
+演目稽古で 「助力の支え」を獲得
+（3回までトレーニング効果アップ 5%）</value>
+  </data>
+  <data name="FusionEffect_9" xml:space="preserve">
+    <value>演目稽古の体力消費ダウン 15%</value>
+  </data>
+  <data name="ActEffect_1" xml:space="preserve">
+    <value>演目稽古に各演目担当が現れる</value>
+  </data>
+  <data name="ActEffect_2" xml:space="preserve">
+    <value>基礎能力の上昇量 +10</value>
+  </data>
+  <data name="ActEffect_3" xml:space="preserve">
+    <value>友情ボーナス 2%</value>
+  </data>
+  <data name="ActEffect_4" xml:space="preserve">
+    <value>編成サポートカードタイプ5種以上なら
+スキルPtのトレーニング効果アップ 20%</value>
+  </data>
+  <data name="ActEffect_5" xml:space="preserve">
+    <value>編成サポートカードタイプ5種以上なら
+友人とグループタイプを除く全ての
+編成サポートカードのヒントイベントが発生する</value>
+  </data>
+  <data name="ActEffect_6" xml:space="preserve">
+    <value>演目稽古に各演目担当が現れる</value>
+  </data>
+  <data name="ActEffect_7" xml:space="preserve">
+    <value>基礎能力の上昇量 +10</value>
+  </data>
+  <data name="ActEffect_8" xml:space="preserve">
+    <value>友情ボーナス 3%</value>
+  </data>
+  <data name="ActEffect_9" xml:space="preserve">
+    <value>編成サポートカードタイプ5種以上なら
+スキルPtのトレーニング効果アップ 25%</value>
+  </data>
+  <data name="ActEffect_10" xml:space="preserve">
+    <value>編成サポートカードタイプ5種以上なら
+友人とグループタイプを除く全ての
+編成サポートカードのヒントイベントが発生する</value>
+  </data>
+  <data name="ActEffect_11" xml:space="preserve">
+    <value>演目稽古に各演目担当が現れる</value>
+  </data>
+  <data name="ActEffect_12" xml:space="preserve">
+    <value>基礎能力の上昇量 +10</value>
+  </data>
+  <data name="ActEffect_13" xml:space="preserve">
+    <value>友情ボーナス 4%</value>
+  </data>
+  <data name="ActEffect_14" xml:space="preserve">
+    <value>編成サポートカードタイプ5種以上なら
+スキルPtのトレーニング効果アップ 30%</value>
+  </data>
+  <data name="ActEffect_15" xml:space="preserve">
+    <value>編成サポートカードタイプ5種以上なら
+友人とグループタイプを除く全ての
+編成サポートカードのヒントイベントが発生する</value>
+  </data>
+  <data name="ActEffect_16" xml:space="preserve">
+    <value>演目稽古に各演目担当が現れる</value>
+  </data>
+  <data name="ActEffect_17" xml:space="preserve">
+    <value>基礎能力の上昇量 +10</value>
+  </data>
+  <data name="ActEffect_18" xml:space="preserve">
+    <value>友情ボーナス 5%</value>
+  </data>
+  <data name="ActEffect_19" xml:space="preserve">
+    <value>編成サポートカードタイプ5種以上なら
+スキルPtのトレーニング効果アップ 40%</value>
+  </data>
+  <data name="ActEffect_20" xml:space="preserve">
+    <value>編成サポートカードタイプ5種以上なら
+友人とグループタイプを除く全ての
+編成サポートカードのヒントイベントが発生する</value>
+  </data>
+  <data name="ActEffect_21" xml:space="preserve">
+    <value>編成サポートカードタイプ5種以上なら選択した
+トレーニングの全ヒントイベントの効果が発動する</value>
+  </data>
+  <data name="ActEffect_22" xml:space="preserve">
+    <value>編成サポートカードタイプ5種以上なら
+スキルPtの獲得上限 +10</value>
+  </data>
+  <data name="ActEffect_23" xml:space="preserve">
+    <value>演目稽古に各演目担当が現れる</value>
+  </data>
+  <data name="ActEffect_24" xml:space="preserve">
+    <value>基礎能力の上昇量 +10</value>
+  </data>
+  <data name="ActEffect_25" xml:space="preserve">
+    <value>友情ボーナス 6%</value>
+  </data>
+  <data name="ActEffect_26" xml:space="preserve">
+    <value>編成サポートカードタイプ5種以上なら
+スキルPtのトレーニング効果アップ 50%</value>
+  </data>
+  <data name="ActEffect_27" xml:space="preserve">
+    <value>編成サポートカードタイプ5種以上なら
+友人とグループタイプを除く全ての
+編成サポートカードのヒントイベントが発生する</value>
+  </data>
+  <data name="ActEffect_28" xml:space="preserve">
+    <value>編成サポートカードタイプ5種以上なら選択した
+トレーニングの全ヒントイベントの効果が発動する</value>
+  </data>
+  <data name="ActEffect_29" xml:space="preserve">
+    <value>編成サポートカードタイプ5種以上なら
+スキルPtの獲得上限 +20</value>
+  </data>
+  <data name="ActEffect_30" xml:space="preserve">
+    <value>演目稽古に各演目担当が現れる</value>
+  </data>
+  <data name="ActEffect_31" xml:space="preserve">
+    <value>基礎能力の上昇量 +10</value>
+  </data>
+  <data name="ActEffect_32" xml:space="preserve">
+    <value>友情ボーナス 7%</value>
+  </data>
+  <data name="ActEffect_33" xml:space="preserve">
+    <value>編成サポートカードタイプ5種以上なら
+スキルPtのトレーニング効果アップ 60%</value>
+  </data>
+  <data name="ActEffect_34" xml:space="preserve">
+    <value>編成サポートカードタイプ5種以上なら
+友人とグループタイプを除く全ての
+編成サポートカードのヒントイベントが発生する</value>
+  </data>
+  <data name="ActEffect_35" xml:space="preserve">
+    <value>編成サポートカードタイプ5種以上なら選択した
+トレーニングの全ヒントイベントの効果が発動する</value>
+  </data>
+  <data name="ActEffect_36" xml:space="preserve">
+    <value>編成サポートカードタイプ5種以上なら
+スキルPtの獲得上限 +30</value>
+  </data>
+  <data name="ActEffect_37" xml:space="preserve">
+    <value>演目稽古に各演目担当が現れる</value>
+  </data>
+  <data name="ActEffect_38" xml:space="preserve">
+    <value>基礎能力の上昇量 +10</value>
+  </data>
+  <data name="ActEffect_39" xml:space="preserve">
+    <value>友情ボーナス 8%</value>
+  </data>
+  <data name="ActEffect_40" xml:space="preserve">
+    <value>編成サポートカードタイプ5種以上なら
+スキルPtのトレーニング効果アップ 80%</value>
+  </data>
+  <data name="ActEffect_41" xml:space="preserve">
+    <value>編成サポートカードタイプ5種以上なら
+友人とグループタイプを除く全ての
+編成サポートカードのヒントイベントが発生する</value>
+  </data>
+  <data name="ActEffect_42" xml:space="preserve">
+    <value>編成サポートカードタイプ5種以上なら選択した
+トレーニングの全ヒントイベントの効果が発動する</value>
+  </data>
+  <data name="ActEffect_43" xml:space="preserve">
+    <value>編成サポートカードタイプ5種以上なら
+スキルPtの獲得上限 +50</value>
+  </data>
+  <data name="ActEffect_44" xml:space="preserve">
+    <value>演目稽古に各演目担当が現れる</value>
+  </data>
+  <data name="ActEffect_45" xml:space="preserve">
+    <value>基礎能力の上昇量 +10</value>
+  </data>
+  <data name="ActEffect_46" xml:space="preserve">
+    <value>友情ボーナス 10%</value>
+  </data>
+  <data name="ActEffect_47" xml:space="preserve">
+    <value>編成サポートカードタイプ5種以上なら
+スキルPtのトレーニング効果アップ 100%</value>
+  </data>
+  <data name="ActEffect_48" xml:space="preserve">
+    <value>編成サポートカードタイプ5種以上なら
+友人とグループタイプを除く全ての
+編成サポートカードのヒントイベントが発生する</value>
+  </data>
+  <data name="ActEffect_49" xml:space="preserve">
+    <value>編成サポートカードタイプ5種以上なら選択した
+トレーニングの全ヒントイベントの効果が発動する</value>
+  </data>
+  <data name="ActEffect_50" xml:space="preserve">
+    <value>編成サポートカードタイプ5種以上なら
+スキルPtの獲得上限 +100</value>
+  </data>
+  <data name="ActEffect_51" xml:space="preserve">
+    <value>演目稽古に各演目担当が現れる</value>
+  </data>
+  <data name="ActEffect_52" xml:space="preserve">
+    <value>基礎能力の上昇量 +10</value>
+  </data>
+  <data name="ActEffect_53" xml:space="preserve">
+    <value>友情ボーナス 12%</value>
+  </data>
+  <data name="ActEffect_54" xml:space="preserve">
+    <value>編成サポートカードタイプ5種以上なら
+スキルPtのトレーニング効果アップ 135%</value>
+  </data>
+  <data name="ActEffect_55" xml:space="preserve">
+    <value>編成サポートカードタイプ5種以上なら
+友人とグループタイプを除く全ての
+編成サポートカードのヒントイベントが発生する</value>
+  </data>
+  <data name="ActEffect_56" xml:space="preserve">
+    <value>編成サポートカードタイプ5種以上なら選択した
+トレーニングの全ヒントイベントの効果が発動する</value>
+  </data>
+  <data name="ActEffect_57" xml:space="preserve">
+    <value>編成サポートカードタイプ5種以上なら
+基礎能力の獲得上限 +20</value>
+  </data>
+  <data name="ActEffect_58" xml:space="preserve">
+    <value>編成サポートカードタイプ5種以上なら
+スキルPtの獲得上限 +120</value>
+  </data>
+  <data name="ActEffect_59" xml:space="preserve">
+    <value>演目稽古に各演目担当が現れる</value>
+  </data>
+  <data name="ActEffect_60" xml:space="preserve">
+    <value>基礎能力の上昇量 +10</value>
+  </data>
+  <data name="ActEffect_61" xml:space="preserve">
+    <value>友情ボーナス 15%</value>
+  </data>
+  <data name="ActEffect_62" xml:space="preserve">
+    <value>編成サポートカードタイプ5種以上なら
+スキルPtのトレーニング効果アップ 170%</value>
+  </data>
+  <data name="ActEffect_63" xml:space="preserve">
+    <value>編成サポートカードタイプ5種以上なら
+友人とグループタイプを除く全ての
+編成サポートカードのヒントイベントが発生する</value>
+  </data>
+  <data name="ActEffect_64" xml:space="preserve">
+    <value>編成サポートカードタイプ5種以上なら選択した
+トレーニングの全ヒントイベントの効果が発動する</value>
+  </data>
+  <data name="ActEffect_65" xml:space="preserve">
+    <value>編成サポートカードタイプ5種以上なら
+基礎能力の獲得上限 +25</value>
+  </data>
+  <data name="ActEffect_66" xml:space="preserve">
+    <value>編成サポートカードタイプ5種以上なら
+スキルPtの獲得上限 +120</value>
+  </data>
+</root>

@@ -1,0 +1,642 @@
+<?xml version='1.0' encoding='utf-8'?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms</value>
+  </resheader>
+  <data name="UnknownAct" xml:space="preserve">
+    <value>未知的骏大祭演目编号。</value>
+  </data>
+  <data name="UnknownAdvice" xml:space="preserve">
+    <value>未知的骏大祭教诲编号。</value>
+  </data>
+  <data name="UnknownFusion" xml:space="preserve">
+    <value>未知的骏大祭转成来源教诲编号。</value>
+  </data>
+  <data name="UnknownLevel" xml:space="preserve">
+    <value>演目等级必须在 1–10 范围内。</value>
+  </data>
+  <data name="Act_1" xml:space="preserve">
+    <value>流镝马</value>
+  </data>
+  <data name="Act_2" xml:space="preserve">
+    <value>神旗争夺战</value>
+  </data>
+  <data name="Act_3" xml:space="preserve">
+    <value>纳舞</value>
+  </data>
+  <data name="Act_4" xml:space="preserve">
+    <value>大曳神舆</value>
+  </data>
+  <data name="Act_5" xml:space="preserve">
+    <value>飞驱</value>
+  </data>
+  <data name="Advice_101" xml:space="preserve">
+    <value>羁绊教诲</value>
+  </data>
+  <data name="Advice_201" xml:space="preserve">
+    <value>得意率教诲</value>
+  </data>
+  <data name="Advice_301" xml:space="preserve">
+    <value>提示教诲</value>
+  </data>
+  <data name="Advice_401" xml:space="preserve">
+    <value>助力教诲</value>
+  </data>
+  <data name="Advice_501" xml:space="preserve">
+    <value>体力教诲</value>
+  </data>
+  <data name="Advice_601" xml:space="preserve">
+    <value>专精教诲</value>
+  </data>
+  <data name="Advice_701" xml:space="preserve">
+    <value>研钻教诲</value>
+  </data>
+  <data name="Advice_801" xml:space="preserve">
+    <value>协力教诲</value>
+  </data>
+  <data name="Advice_901" xml:space="preserve">
+    <value>不屈教诲</value>
+  </data>
+  <data name="Advice_1001" xml:space="preserve">
+    <value>两道教诲</value>
+  </data>
+  <data name="AdviceEffect_1" xml:space="preserve">
+    <value>训练时全部编成支援卡的羁绊 +3（不叠加）
+演目稽古的主属性增长 +3%</value>
+  </data>
+  <data name="AdviceEffect_3" xml:space="preserve">
+    <value>训练时全部编成支援卡的羁绊 +3（不叠加）
+演目稽古的主属性增长 +5%</value>
+  </data>
+  <data name="AdviceEffect_5" xml:space="preserve">
+    <value>训练时全部编成支援卡的羁绊 +3（不叠加）
+演目稽古的主属性增长 +7%</value>
+  </data>
+  <data name="AdviceEffect_7" xml:space="preserve">
+    <value>训练时全部编成支援卡的羁绊 +3（不叠加）
+演目稽古的主属性增长 +9%</value>
+  </data>
+  <data name="AdviceEffect_9" xml:space="preserve">
+    <value>训练时全部编成支援卡的羁绊 +3（不叠加）
+演目稽古的主属性增长 +10%</value>
+  </data>
+  <data name="AdviceEffect_11" xml:space="preserve">
+    <value>训练时全部编成支援卡的羁绊 +3（不叠加）
+演目稽古的主属性增长 +11%</value>
+  </data>
+  <data name="AdviceEffect_13" xml:space="preserve">
+    <value>训练时全部编成支援卡的羁绊 +3（不叠加）
+演目稽古的主属性增长 +12%</value>
+  </data>
+  <data name="AdviceEffect_15" xml:space="preserve">
+    <value>训练时全部编成支援卡的羁绊 +3（不叠加）
+演目稽古的主属性增长 +13%</value>
+  </data>
+  <data name="AdviceEffect_17" xml:space="preserve">
+    <value>训练时全部编成支援卡的羁绊 +3（不叠加）
+演目稽古的主属性增长 +14%</value>
+  </data>
+  <data name="AdviceEffect_19" xml:space="preserve">
+    <value>训练时全部编成支援卡的羁绊 +3（不叠加）
+演目稽古的主属性增长 +15%</value>
+  </data>
+  <data name="AdviceEffect_21" xml:space="preserve">
+    <value>得意率 +10</value>
+  </data>
+  <data name="AdviceEffect_22" xml:space="preserve">
+    <value>得意率 +13</value>
+  </data>
+  <data name="AdviceEffect_23" xml:space="preserve">
+    <value>得意率 +16</value>
+  </data>
+  <data name="AdviceEffect_24" xml:space="preserve">
+    <value>得意率 +20</value>
+  </data>
+  <data name="AdviceEffect_25" xml:space="preserve">
+    <value>得意率 +25</value>
+  </data>
+  <data name="AdviceEffect_26" xml:space="preserve">
+    <value>得意率 +30</value>
+  </data>
+  <data name="AdviceEffect_27" xml:space="preserve">
+    <value>得意率 +35</value>
+  </data>
+  <data name="AdviceEffect_28" xml:space="preserve">
+    <value>得意率 +40</value>
+  </data>
+  <data name="AdviceEffect_29" xml:space="preserve">
+    <value>得意率 +45</value>
+  </data>
+  <data name="AdviceEffect_30" xml:space="preserve">
+    <value>得意率 +50</value>
+  </data>
+  <data name="AdviceEffect_31" xml:space="preserve">
+    <value>提示发生率 +30%</value>
+  </data>
+  <data name="AdviceEffect_32" xml:space="preserve">
+    <value>提示发生率 +33%</value>
+  </data>
+  <data name="AdviceEffect_33" xml:space="preserve">
+    <value>提示发生率 +36%</value>
+  </data>
+  <data name="AdviceEffect_34" xml:space="preserve">
+    <value>提示发生率 +40%</value>
+  </data>
+  <data name="AdviceEffect_35" xml:space="preserve">
+    <value>提示发生率 +45%</value>
+  </data>
+  <data name="AdviceEffect_36" xml:space="preserve">
+    <value>提示发生率 +50%</value>
+  </data>
+  <data name="AdviceEffect_37" xml:space="preserve">
+    <value>提示发生率 +55%</value>
+  </data>
+  <data name="AdviceEffect_38" xml:space="preserve">
+    <value>提示发生率 +60%</value>
+  </data>
+  <data name="AdviceEffect_39" xml:space="preserve">
+    <value>提示发生率 +70%</value>
+  </data>
+  <data name="AdviceEffect_40" xml:space="preserve">
+    <value>提示发生率 +80%</value>
+  </data>
+  <data name="AdviceEffect_41" xml:space="preserve">
+    <value>未发生友情训练时，训练效果 +20%
+演目稽古获得“助力支撑”（训练效果 +5%，最多生效 3 次）</value>
+  </data>
+  <data name="AdviceEffect_43" xml:space="preserve">
+    <value>未发生友情训练时，训练效果 +22%
+演目稽古获得“助力支撑”（训练效果 +5%，最多生效 3 次）</value>
+  </data>
+  <data name="AdviceEffect_45" xml:space="preserve">
+    <value>未发生友情训练时，训练效果 +24%
+演目稽古获得“助力支撑”（训练效果 +5%，最多生效 3 次）</value>
+  </data>
+  <data name="AdviceEffect_47" xml:space="preserve">
+    <value>未发生友情训练时，训练效果 +26%
+演目稽古获得“助力支撑”（训练效果 +5%，最多生效 3 次）</value>
+  </data>
+  <data name="AdviceEffect_49" xml:space="preserve">
+    <value>未发生友情训练时，训练效果 +28%
+演目稽古获得“助力支撑”（训练效果 +5%，最多生效 3 次）</value>
+  </data>
+  <data name="AdviceEffect_51" xml:space="preserve">
+    <value>未发生友情训练时，训练效果 +30%
+演目稽古获得“助力支撑”（训练效果 +5%，最多生效 3 次）</value>
+  </data>
+  <data name="AdviceEffect_53" xml:space="preserve">
+    <value>未发生友情训练时，训练效果 +32%
+演目稽古获得“助力支撑”（训练效果 +5%，最多生效 3 次）</value>
+  </data>
+  <data name="AdviceEffect_55" xml:space="preserve">
+    <value>未发生友情训练时，训练效果 +34%
+演目稽古获得“助力支撑”（训练效果 +5%，最多生效 3 次）</value>
+  </data>
+  <data name="AdviceEffect_57" xml:space="preserve">
+    <value>未发生友情训练时，训练效果 +37%
+演目稽古获得“助力支撑”（训练效果 +5%，最多生效 3 次）</value>
+  </data>
+  <data name="AdviceEffect_59" xml:space="preserve">
+    <value>未发生友情训练时，训练效果 +40%
+演目稽古获得“助力支撑”（训练效果 +5%，最多生效 3 次）</value>
+  </data>
+  <data name="AdviceEffect_61" xml:space="preserve">
+    <value>体力消耗减少 1%</value>
+  </data>
+  <data name="AdviceEffect_62" xml:space="preserve">
+    <value>体力消耗减少 2%</value>
+  </data>
+  <data name="AdviceEffect_63" xml:space="preserve">
+    <value>体力消耗减少 3%</value>
+  </data>
+  <data name="AdviceEffect_64" xml:space="preserve">
+    <value>体力消耗减少 4%</value>
+  </data>
+  <data name="AdviceEffect_65" xml:space="preserve">
+    <value>体力消耗减少 5%</value>
+  </data>
+  <data name="AdviceEffect_66" xml:space="preserve">
+    <value>体力消耗减少 6%</value>
+  </data>
+  <data name="AdviceEffect_67" xml:space="preserve">
+    <value>体力消耗减少 8%</value>
+  </data>
+  <data name="AdviceEffect_68" xml:space="preserve">
+    <value>体力消耗减少 10%</value>
+  </data>
+  <data name="AdviceEffect_69" xml:space="preserve">
+    <value>体力消耗减少 12%</value>
+  </data>
+  <data name="AdviceEffect_70" xml:space="preserve">
+    <value>体力消耗减少 15%</value>
+  </data>
+  <data name="AdviceEffect_71" xml:space="preserve">
+    <value>主属性增长 +5%
+基础属性单次获取上限 +5</value>
+  </data>
+  <data name="AdviceEffect_73" xml:space="preserve">
+    <value>主属性增长 +6%
+基础属性单次获取上限 +6</value>
+  </data>
+  <data name="AdviceEffect_75" xml:space="preserve">
+    <value>主属性增长 +7%
+基础属性单次获取上限 +7</value>
+  </data>
+  <data name="AdviceEffect_77" xml:space="preserve">
+    <value>主属性增长 +8%
+基础属性单次获取上限 +8</value>
+  </data>
+  <data name="AdviceEffect_79" xml:space="preserve">
+    <value>主属性增长 +9%
+基础属性单次获取上限 +9</value>
+  </data>
+  <data name="AdviceEffect_81" xml:space="preserve">
+    <value>主属性增长 +10%
+基础属性单次获取上限 +10</value>
+  </data>
+  <data name="AdviceEffect_83" xml:space="preserve">
+    <value>主属性增长 +13%
+基础属性单次获取上限 +13</value>
+  </data>
+  <data name="AdviceEffect_85" xml:space="preserve">
+    <value>主属性增长 +16%
+基础属性单次获取上限 +16</value>
+  </data>
+  <data name="AdviceEffect_87" xml:space="preserve">
+    <value>主属性增长 +20%
+基础属性单次获取上限 +20</value>
+  </data>
+  <data name="AdviceEffect_89" xml:space="preserve">
+    <value>主属性增长 +25%
+基础属性单次获取上限 +25</value>
+  </data>
+  <data name="AdviceEffect_91" xml:space="preserve">
+    <value>演目担当参加的训练中，“追加稽古”事件发生率 20%</value>
+  </data>
+  <data name="AdviceEffect_92" xml:space="preserve">
+    <value>演目担当参加的训练中，“追加稽古”事件发生率 22%</value>
+  </data>
+  <data name="AdviceEffect_93" xml:space="preserve">
+    <value>演目担当参加的训练中，“追加稽古”事件发生率 24%</value>
+  </data>
+  <data name="AdviceEffect_94" xml:space="preserve">
+    <value>演目担当参加的训练中，“追加稽古”事件发生率 27%</value>
+  </data>
+  <data name="AdviceEffect_95" xml:space="preserve">
+    <value>演目担当参加的训练中，“追加稽古”事件发生率 30%</value>
+  </data>
+  <data name="AdviceEffect_96" xml:space="preserve">
+    <value>演目担当参加的训练中，“追加稽古”事件发生率 35%</value>
+  </data>
+  <data name="AdviceEffect_97" xml:space="preserve">
+    <value>演目担当参加的训练中，“追加稽古”事件发生率 40%</value>
+  </data>
+  <data name="AdviceEffect_98" xml:space="preserve">
+    <value>演目担当参加的训练中，“追加稽古”事件发生率 50%</value>
+  </data>
+  <data name="AdviceEffect_99" xml:space="preserve">
+    <value>演目担当参加的训练中，“追加稽古”事件发生率 65%</value>
+  </data>
+  <data name="AdviceEffect_100" xml:space="preserve">
+    <value>演目担当参加的训练中，“追加稽古”事件发生率 80%</value>
+  </data>
+  <data name="AdviceEffect_101" xml:space="preserve">
+    <value>友情加成 1%
+该演目的编成支援卡额外出现在随机 1 处训练中</value>
+  </data>
+  <data name="AdviceEffect_103" xml:space="preserve">
+    <value>友情加成 2%
+该演目的编成支援卡额外出现在随机 1 处训练中</value>
+  </data>
+  <data name="AdviceEffect_105" xml:space="preserve">
+    <value>友情加成 3%
+该演目的编成支援卡额外出现在随机 1 处训练中</value>
+  </data>
+  <data name="AdviceEffect_107" xml:space="preserve">
+    <value>友情加成 4%
+该演目的编成支援卡额外出现在随机 1 处训练中</value>
+  </data>
+  <data name="AdviceEffect_109" xml:space="preserve">
+    <value>友情加成 5%
+该演目的编成支援卡额外出现在随机 1 处训练中</value>
+  </data>
+  <data name="AdviceEffect_111" xml:space="preserve">
+    <value>友情加成 6%
+该演目的编成支援卡额外出现在随机 1 处训练中</value>
+  </data>
+  <data name="AdviceEffect_113" xml:space="preserve">
+    <value>友情加成 7%
+该演目的编成支援卡额外出现在随机 1 处训练中</value>
+  </data>
+  <data name="AdviceEffect_115" xml:space="preserve">
+    <value>友情加成 8%
+该演目的编成支援卡额外出现在随机 1 处训练中</value>
+  </data>
+  <data name="AdviceEffect_117" xml:space="preserve">
+    <value>友情加成 9%
+该演目的编成支援卡额外出现在随机 1 处训练中</value>
+  </data>
+  <data name="AdviceEffect_119" xml:space="preserve">
+    <value>友情加成 10%
+该演目的编成支援卡额外出现在随机 1 处训练中</value>
+  </data>
+  <data name="AdviceEffect_121" xml:space="preserve">
+    <value>体力至少 45 时，失败率降低 100%</value>
+  </data>
+  <data name="AdviceEffect_122" xml:space="preserve">
+    <value>体力至少 40 时，失败率降低 100%</value>
+  </data>
+  <data name="AdviceEffect_123" xml:space="preserve">
+    <value>体力至少 35 时，失败率降低 100%</value>
+  </data>
+  <data name="AdviceEffect_124" xml:space="preserve">
+    <value>体力至少 30 时，失败率降低 100%</value>
+  </data>
+  <data name="AdviceEffect_125" xml:space="preserve">
+    <value>体力至少 25 时，失败率降低 100%</value>
+  </data>
+  <data name="AdviceEffect_126" xml:space="preserve">
+    <value>体力至少 20 时，失败率降低 100%</value>
+  </data>
+  <data name="AdviceEffect_127" xml:space="preserve">
+    <value>体力至少 15 时，失败率降低 100%</value>
+  </data>
+  <data name="AdviceEffect_128" xml:space="preserve">
+    <value>体力至少 10 时，失败率降低 100%
+演目稽古的训练效果 +1%</value>
+  </data>
+  <data name="AdviceEffect_130" xml:space="preserve">
+    <value>体力至少 5 时，失败率降低 100%
+演目稽古的训练效果 +3%</value>
+  </data>
+  <data name="AdviceEffect_132" xml:space="preserve">
+    <value>失败率降低 100%
+演目稽古的训练效果 +5%</value>
+  </data>
+  <data name="AdviceEffect_134" xml:space="preserve">
+    <value>副属性增长 +1%
+演目稽古的训练效果 +1%</value>
+  </data>
+  <data name="AdviceEffect_136" xml:space="preserve">
+    <value>副属性增长 +2%
+演目稽古的训练效果 +2%</value>
+  </data>
+  <data name="AdviceEffect_138" xml:space="preserve">
+    <value>副属性增长 +3%
+演目稽古的训练效果 +3%</value>
+  </data>
+  <data name="AdviceEffect_140" xml:space="preserve">
+    <value>副属性增长 +4%
+演目稽古的训练效果 +4%</value>
+  </data>
+  <data name="AdviceEffect_142" xml:space="preserve">
+    <value>副属性增长 +5%
+演目稽古的训练效果 +5%</value>
+  </data>
+  <data name="AdviceEffect_144" xml:space="preserve">
+    <value>副属性增长 +8%
+演目稽古的训练效果 +7%</value>
+  </data>
+  <data name="AdviceEffect_146" xml:space="preserve">
+    <value>副属性增长 +11%
+演目稽古的训练效果 +9%</value>
+  </data>
+  <data name="AdviceEffect_148" xml:space="preserve">
+    <value>副属性增长 +15%
+演目稽古的训练效果 +11%</value>
+  </data>
+  <data name="AdviceEffect_150" xml:space="preserve">
+    <value>副属性增长 +20%
+演目稽古的训练效果 +13%</value>
+  </data>
+  <data name="AdviceEffect_152" xml:space="preserve">
+    <value>副属性增长 +25%
+演目稽古的训练效果 +15%</value>
+  </data>
+  <data name="FusionEffect_1" xml:space="preserve">
+    <value>演目稽古的主属性增长 +15%
+合宿中，该演目的编成支援卡额外有 1 人参加训练</value>
+  </data>
+  <data name="FusionEffect_3" xml:space="preserve">
+    <value>得意率 +50
+演目稽古的友情加成 10%</value>
+  </data>
+  <data name="FusionEffect_5" xml:space="preserve">
+    <value>提示发生率 +80%
+演目稽古的提示事件所获提示等级 +1</value>
+  </data>
+  <data name="FusionEffect_7" xml:space="preserve">
+    <value>未发生友情训练时，训练效果 +20%
+演目稽古获得“助力支撑”（训练效果 +5%，最多生效 3 次）</value>
+  </data>
+  <data name="FusionEffect_9" xml:space="preserve">
+    <value>演目稽古的体力消耗减少 15%</value>
+  </data>
+  <data name="ActEffect_1" xml:space="preserve">
+    <value>对应演目担当参加演目稽古</value>
+  </data>
+  <data name="ActEffect_2" xml:space="preserve">
+    <value>基础属性增长 +10</value>
+  </data>
+  <data name="ActEffect_3" xml:space="preserve">
+    <value>友情加成 2%</value>
+  </data>
+  <data name="ActEffect_4" xml:space="preserve">
+    <value>支援卡类型至少 5 种：技能点训练效果 +20%</value>
+  </data>
+  <data name="ActEffect_5" xml:space="preserve">
+    <value>支援卡类型至少 5 种：除友人、团队卡外，全部编成支援卡出现提示事件</value>
+  </data>
+  <data name="ActEffect_6" xml:space="preserve">
+    <value>对应演目担当参加演目稽古</value>
+  </data>
+  <data name="ActEffect_7" xml:space="preserve">
+    <value>基础属性增长 +10</value>
+  </data>
+  <data name="ActEffect_8" xml:space="preserve">
+    <value>友情加成 3%</value>
+  </data>
+  <data name="ActEffect_9" xml:space="preserve">
+    <value>支援卡类型至少 5 种：技能点训练效果 +25%</value>
+  </data>
+  <data name="ActEffect_10" xml:space="preserve">
+    <value>支援卡类型至少 5 种：除友人、团队卡外，全部编成支援卡出现提示事件</value>
+  </data>
+  <data name="ActEffect_11" xml:space="preserve">
+    <value>对应演目担当参加演目稽古</value>
+  </data>
+  <data name="ActEffect_12" xml:space="preserve">
+    <value>基础属性增长 +10</value>
+  </data>
+  <data name="ActEffect_13" xml:space="preserve">
+    <value>友情加成 4%</value>
+  </data>
+  <data name="ActEffect_14" xml:space="preserve">
+    <value>支援卡类型至少 5 种：技能点训练效果 +30%</value>
+  </data>
+  <data name="ActEffect_15" xml:space="preserve">
+    <value>支援卡类型至少 5 种：除友人、团队卡外，全部编成支援卡出现提示事件</value>
+  </data>
+  <data name="ActEffect_16" xml:space="preserve">
+    <value>对应演目担当参加演目稽古</value>
+  </data>
+  <data name="ActEffect_17" xml:space="preserve">
+    <value>基础属性增长 +10</value>
+  </data>
+  <data name="ActEffect_18" xml:space="preserve">
+    <value>友情加成 5%</value>
+  </data>
+  <data name="ActEffect_19" xml:space="preserve">
+    <value>支援卡类型至少 5 种：技能点训练效果 +40%</value>
+  </data>
+  <data name="ActEffect_20" xml:space="preserve">
+    <value>支援卡类型至少 5 种：除友人、团队卡外，全部编成支援卡出现提示事件</value>
+  </data>
+  <data name="ActEffect_21" xml:space="preserve">
+    <value>支援卡类型至少 5 种：所选训练的全部提示事件效果生效</value>
+  </data>
+  <data name="ActEffect_22" xml:space="preserve">
+    <value>支援卡类型至少 5 种：技能点单次获取上限 +10</value>
+  </data>
+  <data name="ActEffect_23" xml:space="preserve">
+    <value>对应演目担当参加演目稽古</value>
+  </data>
+  <data name="ActEffect_24" xml:space="preserve">
+    <value>基础属性增长 +10</value>
+  </data>
+  <data name="ActEffect_25" xml:space="preserve">
+    <value>友情加成 6%</value>
+  </data>
+  <data name="ActEffect_26" xml:space="preserve">
+    <value>支援卡类型至少 5 种：技能点训练效果 +50%</value>
+  </data>
+  <data name="ActEffect_27" xml:space="preserve">
+    <value>支援卡类型至少 5 种：除友人、团队卡外，全部编成支援卡出现提示事件</value>
+  </data>
+  <data name="ActEffect_28" xml:space="preserve">
+    <value>支援卡类型至少 5 种：所选训练的全部提示事件效果生效</value>
+  </data>
+  <data name="ActEffect_29" xml:space="preserve">
+    <value>支援卡类型至少 5 种：技能点单次获取上限 +20</value>
+  </data>
+  <data name="ActEffect_30" xml:space="preserve">
+    <value>对应演目担当参加演目稽古</value>
+  </data>
+  <data name="ActEffect_31" xml:space="preserve">
+    <value>基础属性增长 +10</value>
+  </data>
+  <data name="ActEffect_32" xml:space="preserve">
+    <value>友情加成 7%</value>
+  </data>
+  <data name="ActEffect_33" xml:space="preserve">
+    <value>支援卡类型至少 5 种：技能点训练效果 +60%</value>
+  </data>
+  <data name="ActEffect_34" xml:space="preserve">
+    <value>支援卡类型至少 5 种：除友人、团队卡外，全部编成支援卡出现提示事件</value>
+  </data>
+  <data name="ActEffect_35" xml:space="preserve">
+    <value>支援卡类型至少 5 种：所选训练的全部提示事件效果生效</value>
+  </data>
+  <data name="ActEffect_36" xml:space="preserve">
+    <value>支援卡类型至少 5 种：技能点单次获取上限 +30</value>
+  </data>
+  <data name="ActEffect_37" xml:space="preserve">
+    <value>对应演目担当参加演目稽古</value>
+  </data>
+  <data name="ActEffect_38" xml:space="preserve">
+    <value>基础属性增长 +10</value>
+  </data>
+  <data name="ActEffect_39" xml:space="preserve">
+    <value>友情加成 8%</value>
+  </data>
+  <data name="ActEffect_40" xml:space="preserve">
+    <value>支援卡类型至少 5 种：技能点训练效果 +80%</value>
+  </data>
+  <data name="ActEffect_41" xml:space="preserve">
+    <value>支援卡类型至少 5 种：除友人、团队卡外，全部编成支援卡出现提示事件</value>
+  </data>
+  <data name="ActEffect_42" xml:space="preserve">
+    <value>支援卡类型至少 5 种：所选训练的全部提示事件效果生效</value>
+  </data>
+  <data name="ActEffect_43" xml:space="preserve">
+    <value>支援卡类型至少 5 种：技能点单次获取上限 +50</value>
+  </data>
+  <data name="ActEffect_44" xml:space="preserve">
+    <value>对应演目担当参加演目稽古</value>
+  </data>
+  <data name="ActEffect_45" xml:space="preserve">
+    <value>基础属性增长 +10</value>
+  </data>
+  <data name="ActEffect_46" xml:space="preserve">
+    <value>友情加成 10%</value>
+  </data>
+  <data name="ActEffect_47" xml:space="preserve">
+    <value>支援卡类型至少 5 种：技能点训练效果 +100%</value>
+  </data>
+  <data name="ActEffect_48" xml:space="preserve">
+    <value>支援卡类型至少 5 种：除友人、团队卡外，全部编成支援卡出现提示事件</value>
+  </data>
+  <data name="ActEffect_49" xml:space="preserve">
+    <value>支援卡类型至少 5 种：所选训练的全部提示事件效果生效</value>
+  </data>
+  <data name="ActEffect_50" xml:space="preserve">
+    <value>支援卡类型至少 5 种：技能点单次获取上限 +100</value>
+  </data>
+  <data name="ActEffect_51" xml:space="preserve">
+    <value>对应演目担当参加演目稽古</value>
+  </data>
+  <data name="ActEffect_52" xml:space="preserve">
+    <value>基础属性增长 +10</value>
+  </data>
+  <data name="ActEffect_53" xml:space="preserve">
+    <value>友情加成 12%</value>
+  </data>
+  <data name="ActEffect_54" xml:space="preserve">
+    <value>支援卡类型至少 5 种：技能点训练效果 +135%</value>
+  </data>
+  <data name="ActEffect_55" xml:space="preserve">
+    <value>支援卡类型至少 5 种：除友人、团队卡外，全部编成支援卡出现提示事件</value>
+  </data>
+  <data name="ActEffect_56" xml:space="preserve">
+    <value>支援卡类型至少 5 种：所选训练的全部提示事件效果生效</value>
+  </data>
+  <data name="ActEffect_57" xml:space="preserve">
+    <value>支援卡类型至少 5 种：基础属性单次获取上限 +20</value>
+  </data>
+  <data name="ActEffect_58" xml:space="preserve">
+    <value>支援卡类型至少 5 种：技能点单次获取上限 +120</value>
+  </data>
+  <data name="ActEffect_59" xml:space="preserve">
+    <value>对应演目担当参加演目稽古</value>
+  </data>
+  <data name="ActEffect_60" xml:space="preserve">
+    <value>基础属性增长 +10</value>
+  </data>
+  <data name="ActEffect_61" xml:space="preserve">
+    <value>友情加成 15%</value>
+  </data>
+  <data name="ActEffect_62" xml:space="preserve">
+    <value>支援卡类型至少 5 种：技能点训练效果 +170%</value>
+  </data>
+  <data name="ActEffect_63" xml:space="preserve">
+    <value>支援卡类型至少 5 种：除友人、团队卡外，全部编成支援卡出现提示事件</value>
+  </data>
+  <data name="ActEffect_64" xml:space="preserve">
+    <value>支援卡类型至少 5 种：所选训练的全部提示事件效果生效</value>
+  </data>
+  <data name="ActEffect_65" xml:space="preserve">
+    <value>支援卡类型至少 5 种：基础属性单次获取上限 +25</value>
+  </data>
+  <data name="ActEffect_66" xml:space="preserve">
+    <value>支援卡类型至少 5 种：技能点单次获取上限 +120</value>
+  </data>
+</root>
