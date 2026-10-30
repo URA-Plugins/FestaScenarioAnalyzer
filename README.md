@@ -66,31 +66,11 @@ if ($LASTEXITCODE) { throw '插件构建失败。' }
 
 生产插件的 `obj/project.assets.json` 记录解析到的 Host 包版本；该缓存包的 `.nupkg.metadata` 中 `source` 必须是公开 URA NuGet 源。
 
-smoke 使用本仓 `tests/Support/SmokeHost.cs` 与 Host 的测试友元声明，先验证 NuGet 源映射、生产引用和公开仓库边界。CI 按实际解析的 Host 包元数据检出源码；本地的 `UraTestHostRoot` 也必须指向包内 `repository.commit` 对应的 Host 源码。SDK `2026.10.31.1` 对应 `756be4e7e73db6ebf84c7c767e1cf088ff641743`。
-
-```powershell
-$festaHostRoot = 'C:\src\UmamusumeResponseAnalyzer'
-dotnet build .\tests\FestaScenarioAnalyzerSmoke\FestaScenarioAnalyzerSmoke.csproj -c Release @festaBuildArgs "-p:UraTestHostRoot=$festaHostRoot"
-if ($LASTEXITCODE) { throw 'Smoke 构建失败。' }
-dotnet .\tests\FestaScenarioAnalyzerSmoke\bin\Release\net10.0\FestaScenarioAnalyzerSmoke.dll
-if ($LASTEXITCODE) { throw 'Smoke 执行失败。' }
-```
-
-测试覆盖注册/分发、稽古替换与命令映射、参考收益、静态数据完整性、不可变快照、跨育成隔离、局部响应、历史和配置行为。默认 framebuffer 为 120×35，检查五列分组与收益行对齐、按需提示、中文/长日文、数值颜色、整页滚动、窄窗缩放、滚动条点击与拖动、历史按键。
-
-原始抓包回放直接读取收集器保存的 `.msgpack`，通过 Host 的 DTO 反序列化与插件实际注册分发；不会向游戏发送请求。数据库目录必须包含 Host 所需的 `.br` 文件：
-
-```powershell
-dotnet .\tests\FestaScenarioAnalyzerSmoke\bin\Release\net10.0\FestaScenarioAnalyzerSmoke.dll `
-  --captures "$env:LOCALAPPDATA\UmamusumeResponseAnalyzer\packets" `
-  --database "$env:LOCALAPPDATA\UmamusumeResponseAnalyzer"
-```
-
 2026-10-29 校准使用同一轮育成、回合 1–78 的 427 份 Festa 响应。55 次成功训练（普通 21 次、稽古 34 次，其中合宿 11 次）中，五围、技能点及合并后的体力预测全部与执行结果一致；19 次训练需要计入 Festa 体力增量。两次局部转成均由后续完整装备响应承接。未覆盖失败训练、多轮真实育成切换或所有教诲组合；这些边界仍需另外取样。
 
 2026-10-30 分组布局验收回放 411 份 Festa 响应，核对 59 次成功训练（普通 22 次、稽古 37 次，含合宿 12 次、属性超过 1200 的训练 27 次）和 2 次局部转成响应；五围、技能点、训练后体力与快照隔离检查通过。实包第 6、7 回合用于 120×35 的普通五列、速度稽古替换及 Legend 同视口对照。视觉证据与验证记录见 [design-qa.md](design-qa.md)。
 
-此次回放使用的本机名字库缺少支援卡 `30322`、`30323`。名称与支援类型依赖 Host 数据库；名称缺项时显示未知名称。原始包和账户数据不编入插件或测试夹具。
+此次回放使用的本机名字库缺少支援卡 `30322`、`30323`。名称与支援类型依赖 Host 数据库；名称缺项时显示未知名称。原始包和账户数据不编入插件。
 
 生成 Release ZIP（关闭自动部署）：
 
@@ -103,6 +83,6 @@ if ($LASTEXITCODE) { throw '插件打包失败。' }
 
 产物为 `bin/Release/FestaScenarioAnalyzer.zip`，仅包含 manifest、插件 DLL 和日文资源 DLL；Host 和其他插件 DLL 不进入包。`Dependencies` 为空。
 
-GitHub Actions 调用固定提交的 [URA plugin workflows](https://github.com/URA-Plugins/.github)，执行 Release 构建、ZIP 校验和本仓 smoke。普通 push、pull request 和手动运行执行验证；推送 `v` 开头且数字部分与项目版本一致的 tag 后，通过验证才创建 GitHub Release。
+GitHub Actions 调用固定提交的 [URA plugin workflows](https://github.com/URA-Plugins/.github)，执行 Release 构建和 ZIP 校验。普通 push、pull request 和手动运行执行验证；推送 `v` 开头且数字部分与项目版本一致的 tag 后，通过验证才创建 GitHub Release。
 
-验证包含实际抓包离线回放、合成 DTO 和本地终端 framebuffer；覆盖范围以所列样本为限。不包含最优教诲推荐、未来回合模拟或自动游戏操作。
+上述校准使用实际抓包离线回放、合成 DTO 和本地终端 framebuffer；覆盖范围以所列样本为限。不包含最优教诲推荐、未来回合模拟或自动游戏操作。

@@ -1,8 +1,0 @@
-<Project>
-  <PropertyGroup>
-    <UraTestHostRoot Condition="'$(UraTestHostRoot)' == ''">$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\..\..\..\UmamusumeResponseAnalyzer'))</UraTestHostRoot>
-    <GenerateUraPluginManifestOnBuild>false</GenerateUraPluginManifestOnBuild>
-    <PackageUraPluginOnBuild>false</PackageUraPluginOnBuild>
-    <DeployUraPluginToLocalAppDataOnBuild>false</DeployUraPluginToLocalAppDataOnBuild>
-  </PropertyGroup>
-</Project>

@@ -14,8 +14,6 @@
     <PluginChangelog>首次发布骏大祭训练分析与内存历史浏览插件。</PluginChangelog>
   </PropertyGroup>
   <ItemGroup>
-    <InternalsVisibleTo Include="FestaScenarioAnalyzerSmoke" />
-    <Compile Remove="tests\**\*.cs" />
     <PackageReference Include="UmamusumeResponseAnalyzer" Version="*" PrivateAssets="all" />
   </ItemGroup>
 </Project>
