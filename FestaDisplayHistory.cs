@@ -42,6 +42,11 @@ internal sealed class FestaDisplayHistory(
 
     internal readonly record struct Key(int SingleModeCharaId, int Turn);
 
+    public bool IsVisible(Key key)
+    {
+        lock (gate) return active && visibleKey == key;
+    }
+
     public void Initialize(
         IApplication targetApplication,
         Func<Key, bool> show,

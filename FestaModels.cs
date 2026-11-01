@@ -23,7 +23,7 @@ internal sealed record FestaTraining(
 }
 internal sealed record FestaPartner(
     int TargetId, int CharaId, int ActType, string Name, int Friendship,
-    bool IsHint, bool IsFriend, bool Shining);
+    bool IsSupportCard, bool IsHint, bool IsFriend, bool Shining);
 internal sealed record FestaCheckpointResult(int Id, int ResultType);
 internal sealed record FestaGaugeGain(int ActType, int Gain);
 internal sealed record FestaGaugeCommand(int CommandType, ImmutableArray<FestaGaugeGain> Gauges);

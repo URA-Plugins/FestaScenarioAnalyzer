@@ -20,6 +20,7 @@ public sealed class FestaScenarioAnalyzer : IPlugin
         history.Initialize(context.Application, key => Show(key, false), key =>
         {
             lock (gate) snapshots.Remove(key);
+            FestaTrainingDisplay.Remove(this, new(key.SingleModeCharaId, key.Turn));
         });
         active = true;
         Register<SingleModeFestaLoadResponse>(context, "load", r =>
@@ -93,6 +94,11 @@ public sealed class FestaScenarioAnalyzer : IPlugin
             snapshots[key] = snapshot;
             target = workspace ??= Workspace.Create(WorkspaceTitle);
         }
+        FestaTrainingDisplay.Retain(this, new(key.SingleModeCharaId, key.Turn), () =>
+        {
+            if (history.IsVisible(key))
+                Show(key, false);
+        });
         // 发布会等待 UI；历史按键回调同样需要 gate，因此不能持锁发布。
         if (history.ShouldShow(key))
             Show(key, true);
@@ -113,7 +119,8 @@ public sealed class FestaScenarioAnalyzer : IPlugin
                 throw new InvalidOperationException(FestaText.Error("DisplayMissing", key.SingleModeCharaId, key.Turn));
             target = workspace;
         }
-        history.Show(target, key, FestaDisplayRenderer.Render(snapshot), switchToWorkspace);
+        history.Show(target, key, FestaDisplayRenderer.Render(snapshot,
+            FestaTrainingDisplay.Capture(new(key.SingleModeCharaId, key.Turn))), switchToWorkspace);
         return true;
     }
 
@@ -133,6 +140,7 @@ public sealed class FestaScenarioAnalyzer : IPlugin
             workspace = null;
         }
         history.Stop();
+        FestaTrainingDisplay.Clear(this);
         target?.RemovePanel("training");
         return ValueTask.CompletedTask;
     }

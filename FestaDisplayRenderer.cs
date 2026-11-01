@@ -1,4 +1,5 @@
 using System.Drawing;
+using System.Collections.Immutable;
 using System.Globalization;
 using Terminal.Gui.Drawing;
 using Terminal.Gui.Input;
@@ -8,12 +9,14 @@ using Terminal.Gui.Views;
 using UmamusumeResponseAnalyzer.TerminalGui;
 using TAttribute = Terminal.Gui.Drawing.Attribute;
 using TColor = Terminal.Gui.Drawing.Color;
+using UiColor = FestaScenarioAnalyzer.FestaDisplayColor;
 
 namespace FestaScenarioAnalyzer;
 
 internal static class FestaDisplayRenderer
 {
-    public static WorkspaceContent Render(FestaTurn turn) => new(() => new Dashboard(turn));
+    public static WorkspaceContent Render(FestaTurn turn, ImmutableArray<FestaDisplayLine> extra)
+        => new(() => new Dashboard(turn, extra));
 
     internal static bool TryScroll(View view, Command command)
         => view is Dashboard dashboard && dashboard.Scroll(command);
@@ -24,8 +27,12 @@ internal static class FestaDisplayRenderer
         const int MainWidth = CardWidth * 5;
         const int InnerWidth = CardWidth - 3;
         readonly Palette palette;
+        readonly UiLine[] extraRows;
+        readonly FrameView? extras;
+        readonly int mainHeight;
+        int extraWidth = 24;
 
-        public Dashboard(FestaTurn turn)
+        public Dashboard(FestaTurn turn, ImmutableArray<FestaDisplayLine> extra)
         {
             Id = "festa-root";
             Width = Dim.Fill();
@@ -35,6 +42,13 @@ internal static class FestaDisplayRenderer
             ViewportSettings = ViewportSettingsFlags.HasScrollBars;
             palette = new(GetAttributeForRole(VisualRole.Normal));
             SetScheme(palette.Base);
+            extraRows = extra.IsDefaultOrEmpty ? [] : [.. extra.Select(line => new UiLine(
+                line.Segments.Select(segment => new TextRun(segment.Text, segment.Color)).ToArray()))];
+            if (extraRows.Length > 0)
+            {
+                extras = CreateFrame("festa-extra", MainWidth, 0, extraWidth, 3, extraRows);
+                Add(extras);
+            }
             AddCommand(Command.PageUp, () => Scroll(Command.PageUp));
             AddCommand(Command.PageDown, () => Scroll(Command.PageDown));
             AddCommand(Command.Start, () => Scroll(Command.Start));
@@ -56,13 +70,14 @@ internal static class FestaDisplayRenderer
             if (turn.Training.IsEmpty)
             {
                 Add(CreateFrame("festa-no-training", 0, y, MainWidth, 3, [new(FestaText.Get("NoTraining"))]));
-                SetContentSize(new(MainWidth, y + 3));
+                mainHeight = y + 3;
+                SetContentSize(new(MainWidth, mainHeight));
                 return;
             }
             var maxGain = turn.Training.Where(training => training.IsEnabled)
                 .Select(training => training.Gains.Sum()).DefaultIfEmpty().Max();
             var cards = turn.Training.Select(training => CreateCard(turn, training, maxGain)).ToArray();
-            // Align each section across all five cards, including wrapped names and gauge predictions.
+            // Keep section separators aligned across all five cards.
             var heights = Enumerable.Range(0, 3)
                 .Select(group => cards.Max(card => RowsHeight(card.Groups[group], InnerWidth))).ToArray();
             var cardHeight = heights.Sum() + 7;
@@ -90,7 +105,8 @@ internal static class FestaDisplayRenderer
                 }
                 Add(frame);
             }
-            SetContentSize(new(MainWidth, y + cardHeight));
+            mainHeight = y + cardHeight;
+            SetContentSize(new(MainWidth, mainHeight));
         }
 
         void AddHeaders(FestaTurn turn)
@@ -165,21 +181,8 @@ internal static class FestaDisplayRenderer
                     new(FestaText.Get("VitalLabel")), new(training.VitalAfter.ToString(), VitalColor(training.VitalAfter)),
                     new(FestaText.Get("VitalLimit", turn.MaxVital))
                 ]),
-                new(FestaText.Get("TrainingLevel", training.Level))
+                new(FestaText.Get("TrainingLevel", training.Level, training.Gauges.Sum(gauge => gauge.Gain)))
             };
-            var gaugeLine = string.Empty;
-            foreach (var gauge in training.Gauges)
-            {
-                var gain = FestaText.Get("GaugeGain", FestaMasterData.ActName(gauge.ActType), gauge.Gain);
-                if ((gaugeLine + gain).GetColumns() > InnerWidth)
-                {
-                    cost.Add(new(gaugeLine.TrimEnd()));
-                    gaugeLine = string.Empty;
-                }
-                gaugeLine += gain + " ";
-            }
-            if (gaugeLine.Length > 0)
-                cost.Add(new(gaugeLine.TrimEnd()));
 
             var gains = new List<UiLine>
             {
@@ -194,23 +197,48 @@ internal static class FestaDisplayRenderer
                 var segments = new List<TextRun>();
                 if (partner.IsHint)
                     segments.Add(new("!", UiColor.Red));
-                segments.Add(new(partner.Name,
+                var friendship = partner.IsSupportCard && partner.Friendship < 100
+                    ? FestaText.Get("PartnerFriendship", partner.Friendship) : string.Empty;
+                var nameWidth = InnerWidth - friendship.GetColumns() - (partner.IsHint ? 1 : 0);
+                var name = partner.Name.GetColumns() <= nameWidth ? partner.Name
+                    : TextFormatter.ClipOrPad(partner.Name, nameWidth - "…".GetColumns()).TrimEnd() + "…";
+                segments.Add(new(name,
                     partner.IsFriend ? UiColor.Green : partner.Shining ? UiColor.Cyan : UiColor.Normal));
-                if (partner.Friendship is > 0 and < 100)
-                    segments.Add(new(FestaText.Get("PartnerFriendship", partner.Friendship), UiColor.Yellow));
+                if (friendship.Length > 0)
+                    segments.Add(new(friendship, partner.Friendship < 80 ? UiColor.Red : UiColor.Yellow));
                 gains.Add(new(segments));
             }
+            for (var i = training.Partners.Length; i < 5; i++)
+                gains.Add(new(string.Empty));
             return new(training, new(title), [[.. capacity], [.. cost], [.. gains]]);
         }
 
         protected override void OnSubViewLayout(LayoutEventArgs args)
         {
-            base.OnSubViewLayout(args);
+            if (extras is not null)
+            {
+                var width = Math.Max(Frame.Width, MainWidth + 24);
+                if (extraWidth != width - MainWidth)
+                {
+                    extraWidth = width - MainWidth;
+                    extras.Width = extraWidth;
+                    var text = extras.SubViews.OfType<StyledTextView>().Single();
+                    text.Width = extraWidth - 4;
+                    text.SetRows(extraRows, extraWidth - 4);
+                }
+                var visibleHeight = Math.Max(1, Frame.Height - (width > Frame.Width ? 1 : 0));
+                var height = Math.Max(visibleHeight, Math.Max(mainHeight, RowsHeight(extraRows, extraWidth - 4) + 2));
+                var contentSize = new Size(width, height);
+                if (GetContentSize() != contentSize)
+                    SetContentSize(contentSize);
+                extras.Height = height;
+            }
             var size = GetContentSize();
             var maxX = Math.Max(0, size.Width - Math.Max(1, Viewport.Width));
             var maxY = Math.Max(0, size.Height - Math.Max(1, Viewport.Height));
             if (Viewport.X > maxX || Viewport.Y > maxY)
                 Viewport = new(Math.Min(Viewport.X, maxX), Math.Min(Viewport.Y, maxY), Viewport.Width, Viewport.Height);
+            base.OnSubViewLayout(args);
         }
 
         internal bool Scroll(Command command)
@@ -261,8 +289,7 @@ internal static class FestaDisplayRenderer
                 X = x, Y = y, Width = width, Height = height,
                 ReadOnly = true, CanFocus = false, WordWrap = false
             };
-            text.Load([.. WrapRows(rows, width).Select(row => row.Runs.SelectMany(run =>
-                Cell.ToCellList(run.Text, palette.Attribute(run.Color))).ToList())]);
+            text.SetRows(rows, width);
             return text;
         }
     }
@@ -326,17 +353,20 @@ internal static class FestaDisplayRenderer
         public string Text => string.Concat(Runs.Select(run => run.Text));
     }
 
-    enum UiColor { Normal, Cyan, Green, Yellow, Orange, Red }
 
     sealed class StyledTextView : TextView
     {
-        readonly TAttribute normal;
+        readonly Palette palette;
 
         public StyledTextView(Palette palette)
         {
-            normal = palette.Normal;
+            this.palette = palette;
             SetScheme(palette.Base);
         }
+
+        public void SetRows(IReadOnlyList<UiLine> rows, int width)
+            => Load([.. WrapRows(rows, width).Select(row => row.Runs.SelectMany(run =>
+                Cell.ToCellList(run.Text, palette.Attribute(run.Color))).ToList())]);
 
         protected override bool OnMouseEvent(Mouse mouse)
         {
@@ -349,11 +379,11 @@ internal static class FestaDisplayRenderer
         }
 
         protected override void OnDrawNormalColor(List<Cell> line, int idxCol, int idxRow)
-            => SetAttribute(line[idxCol].Attribute ?? normal);
+            => SetAttribute(line[idxCol].Attribute ?? palette.Normal);
         protected override void OnDrawReadOnlyColor(List<Cell> line, int idxCol, int idxRow)
-            => SetAttribute(line[idxCol].Attribute ?? normal);
+            => SetAttribute(line[idxCol].Attribute ?? palette.Normal);
         protected override void OnDrawUsedColor(List<Cell> line, int idxCol, int idxRow)
-            => SetAttribute(line[idxCol].Attribute ?? normal);
+            => SetAttribute(line[idxCol].Attribute ?? palette.Normal);
     }
 
     sealed class Palette

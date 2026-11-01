@@ -141,9 +141,6 @@
   <data name="FailureRate" xml:space="preserve">
     <value>({0}%)</value>
   </data>
-  <data name="GaugeGain" xml:space="preserve">
-    <value>{0}{1:+0;-0;0}</value>
-  </data>
   <data name="PartnerFriendship" xml:space="preserve">
     <value> {0}</value>
   </data>
@@ -163,7 +160,7 @@
     <value>/{0}</value>
   </data>
   <data name="TrainingLevel" xml:space="preserve">
-    <value>Lv{0}</value>
+    <value>Lv{0} | {1:+0;-0;+0}</value>
   </data>
   <data name="TrainingGainLabel" xml:space="preserve">
     <value>属:</value>

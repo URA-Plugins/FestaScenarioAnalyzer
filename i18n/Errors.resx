@@ -11,4 +11,5 @@
   <data name="WrongScenario" xml:space="preserve"><value>骏大祭接口返回了其他剧本：scenario_id={0}，育成 {1}。</value></data>
   <data name="DisplayMissing" xml:space="preserve"><value>骏大祭历史记录不存在：育成 {0}，回合 {1}。</value></data>
   <data name="MissingAdvice" xml:space="preserve"><value>育成 {0} 第 {1} 回合的演目 {2} 装备教诲 {3}，但 advice_info_array 缺少该记录，无法确定转成附效。</value></data>
+  <data name="InvalidPartTitle" xml:space="preserve"><value>附加内容来源标题必须是单行文本。</value></data>
 </root>

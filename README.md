@@ -4,14 +4,22 @@
 
 ## 显示与操作
 
-- 开发测试尺寸为 120×35 字符，五列各宽 19 字符、总宽 95，右侧留空。顶栏显示日期/回合、总属性与 Pt、当前体力和干劲。同一属性存在可执行稽古时以稽古替换普通训练，否则显示普通训练；只提供禁用命令时保留不可执行标记。
-- 训练卡用横线分成属性容量、训练代价与槽预测、收益与参与者三组。五列按组对齐，长名字或多项槽预测折行后，后续收益行仍在同一高度。`当前:可获得` 下的第二个数字是距属性上限的剩余增长空间，不是上限本身；不超过 200/400 时分别标红/黄。
-- 训练后体力显示为当前值/上限，当前值按 `<30`、`<50`、`<70`、其余四档标红、橙、黄、绿。非零失败率在训练标题括号中标红。训练等级与演目名称/槽增量列在体力下方，名称和增量整组换行。
-- 五围总收益与技能点同排，可执行训练中最高的五围收益数字标青色；这不代表综合最优推荐。支援/NPC、Hint 和友情标记保留，羁绊数字仅显示 1–99。长名字完整折行，保留各段颜色。
+- 开发测试尺寸为 120×35 字符，五列各宽 19 字符、总宽 95。顶栏显示日期/回合、总属性与 Pt、当前体力和干劲。同一属性存在可执行稽古时以稽古替换普通训练，否则显示普通训练；只提供禁用命令时保留不可执行标记。
+- 训练卡用横线分成属性容量、训练代价与槽预测、收益与参与者三组，五列按组对齐。参与者区固定五行，每人一行，不足五人补空白；长名字按终端字符宽度截短并加省略号，保留 Hint 与羁绊数字。`当前:可获得` 下的第二个数字是距属性上限的剩余增长空间，不是上限本身；不超过 200/400 时分别标红/黄。
+- 训练后体力显示为当前值/上限，当前值按 `<30`、`<50`、`<70`、其余四档标红、橙、黄、绿。非零失败率在训练标题括号中标红。体力下方显示训练等级与全部演目槽增量合计，例如 `Lv1 | +4`；零增量显示 `Lv1 | +0`。
+- 五围总收益与技能点同排，可执行训练中最高的五围收益数字标青色；这不代表综合最优推荐。支援/NPC、Hint 和友情标记保留。仅为羁绊未满的支援卡显示数值：`0–79` 标红、`80–99` 标黄；非支援卡 NPC 和满羁绊支援卡隐藏数字，名字使用释放的宽度。支援卡身份由 `support_card_array` 确定。
 - 提示区仅显示未达成的下一检查点缺口、合宿剩余回合，以及服务端报告的未增长、槽溢出和等级溢出。没有这些提示时不保留空框。
 - 面板聚焦时，↑/↓ 浏览上一条/下一条历史，←/→ 跳到最旧/最新记录。PageUp/PageDown、Home/End 和滚轮滚动整页；窄窗口提供滚动条，点击正文聚焦所属区域。模态对话框和其他工作区保留自己的按键行为。
 
 历史以 `(single_mode_chara_id, turn)` 为键，只保存完整训练画面；事件和比赛过程响应更新内部状态，保留最近的训练画面。同回合新的完整训练画面原位更新，浏览旧记录时收到新回合只标记未读；正在查看的最旧记录被淘汰时跳到最新记录。快照不可变，历史不写入磁盘。
+
+同时安装配套的 EventLogger 时，主区右侧自页面顶部纵向显示连续事件、训练失败、事件数、继承收益和胜场。附加区域最小宽度为 24 字符，随窗口扩大占用剩余宽度；内容自动折行并随整页滚动，空内容不占位。历史保存各自角色与回合的附加内容，同键更新不增加历史条目或未读；淘汰记录、关闭历史和卸载会释放对应内容。
+
+## 附加内容接口
+
+`FestaTrainingDisplay.RegisterPartProducer(sourceTitle)` 返回可释放的生产者句柄。调用 `Update(FestaTrainingDisplayId, IReadOnlyList<FestaDisplayLine>)` 提交带颜色的不可变文本行；标识由 `SingleModeCharaId` 与 `Turn` 组成。接口只写附加区域，不能修改训练数据。Festa 复制行集合，历史按键保存快照；训练画面发布前最多暂存生产者最近一次更新，避免积累没有训练画面的回合。释放句柄删除该生产者的全部内容。
+
+EventLogger 对 Festa 单向软依赖，Festa 不引用 EventLogger。此接口对应两个插件的 `2026.11.1` 配套版本，须成对更新；单独安装任一插件可使用其自身功能。
 
 配置通过 Host 的插件配置入口修改，点击“保存”才写入 `PluginData/FestaScenarioAnalyzer/settings.json`：
 
@@ -46,7 +54,7 @@ python .\scripts\generate_festa_data.py --master 'G:\DMM\Umamusume\umamusume_Dat
 
 ## 本地构建与验证
 
-要求 .NET 10 SDK。生产项目只通过 `UmamusumeResponseAnalyzer Version="*" PrivateAssets="all"` 引用 Host，不依赖 Legend/Ramen，也不导出跨插件显示或快照 API。实际运行的 Host 必须包含 Festa 协议类型。底部滚动条的鼠标输入修复位于 Host 的任务栏事件处理，需使用包含该修复的 Host 构建；单独替换插件 ZIP 不包含此修复。
+要求 .NET 10 SDK。生产项目只通过 `UmamusumeResponseAnalyzer Version="*" PrivateAssets="all"` 引用 Host，不依赖其他插件；跨插件入口限于上述附加内容接口。实际运行的 Host 必须包含 Festa 协议类型。底部滚动条的鼠标输入修复位于 Host 的任务栏事件处理，需使用包含该修复的 Host 构建；单独替换插件 ZIP 不包含此修复。
 
 公开 SDK `2026.10.31.1` 包含 Festa DTO。仓库 `NuGet.Config` 将 Host 包映射到 `https://ura.shuise.net/nuget/index.json`，其它包映射到 nuget.org。在插件目录执行：
 
@@ -70,18 +78,21 @@ if ($LASTEXITCODE) { throw '插件构建失败。' }
 
 2026-10-30 分组布局验收回放 411 份 Festa 响应，核对 59 次成功训练（普通 22 次、稽古 37 次，含合宿 12 次、属性超过 1200 的训练 27 次）和 2 次局部转成响应；五围、技能点、训练后体力与快照隔离检查通过。实包第 6、7 回合用于 120×35 的普通五列、速度稽古替换及 Legend 同视口对照。视觉证据与验证记录见 [design-qa.md](design-qa.md)。
 
-此次回放使用的本机名字库缺少支援卡 `30322`、`30323`。名称与支援类型依赖 Host 数据库；名称缺项时显示未知名称。原始包和账户数据不编入插件。
+2026-11-01 回放包含 423 份 Festa 响应，55 次成功训练（普通 19 次、稽古 36 次）的五围、技能点和体力预测全部吻合，预测公式保持不变；EventLogger 的对应训练记录也与面板一致。本次名字库包含 `30322`、友人卡 `30323`。名称与支援类型依赖 Host 数据库，原始包和账户数据不编入插件。
 
-生成 Release ZIP（关闭自动部署）：
+2026-11-01 面板离屏自检覆盖槽增量合计与零增量、0–5 人固定高度、长中文/日文名字截短、Hint 和姓名颜色、支援卡羁绊 0/79/80/99 的颜色、满羁绊隐藏，以及 NPC 零值和非零值隐藏；隐藏数字后名字恢复可用宽度且没有多余空格。120×35、160×40 与 70×18 下的 Extra 折行、缩放和滚动通过。逐回合附加内容切换、同键刷新和生产者释放通过。本地证据位于 `artifacts/panel-check-20261101`，使用最终 Release DLL；ZIP 内 DLL 字节一致，Host 包校验通过。此次验证不包含真实在线游戏或物理终端。
+
+生成 Release ZIP 并自动部署到本机已有的 `%LOCALAPPDATA%\UmamusumeResponseAnalyzer\Plugins` 目录：
 
 ```powershell
 dotnet build .\FestaScenarioAnalyzer.csproj -c Release -r win-x64 --self-contained false -p:PlatformTarget=AnyCPU -m:1 -nr:false `
-  -p:GenerateUraPluginManifestOnBuild=true -p:PackageUraPluginOnBuild=true `
-  -p:DeployUraPluginToLocalAppDataOnBuild=false
+  -p:GenerateUraPluginManifestOnBuild=true -p:PackageUraPluginOnBuild=true
 if ($LASTEXITCODE) { throw '插件打包失败。' }
 ```
 
 产物为 `bin/Release/FestaScenarioAnalyzer.zip`，仅包含 manifest、插件 DLL 和日文资源 DLL；Host 和其他插件 DLL 不进入包。`Dependencies` 为空。
+
+SDK 默认启用构建后自动部署；仅构建验证时显式传入 `-p:DeployUraPluginToLocalAppDataOnBuild=false`。部署后重启 Host 加载新包。
 
 GitHub Actions 调用固定提交的 [URA plugin workflows](https://github.com/URA-Plugins/.github)，执行 Release 构建和 ZIP 校验。普通 push、pull request 和手动运行执行验证；推送 `v` 开头且数字部分与项目版本一致的 tag 后，通过验证才创建 GitHub Release。
 

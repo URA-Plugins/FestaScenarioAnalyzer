@@ -5,13 +5,13 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <DefaultItemExcludes>$(DefaultItemExcludes);artifacts\**</DefaultItemExcludes>
-    <Version>2026.10.31</Version>
+    <Version>2026.11.1</Version>
     <PluginInternalName>FestaScenarioAnalyzer</PluginInternalName>
     <PluginDisplayName>骏大祭分析</PluginDisplayName>
     <PluginAuthor>UmamusumeResponseAnalyzer</PluginAuthor>
     <PluginDescription>解析骏大祭回合训练信息</PluginDescription>
     <PluginRepositoryUrl>https://github.com/URA-Plugins/FestaScenarioAnalyzer</PluginRepositoryUrl>
-    <PluginChangelog>首次发布骏大祭训练分析与内存历史浏览插件。</PluginChangelog>
+    <PluginChangelog>提供附加内容接口，与 EventLogger 联动并保存逐回合历史。</PluginChangelog>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="UmamusumeResponseAnalyzer" Version="*" PrivateAssets="all" />

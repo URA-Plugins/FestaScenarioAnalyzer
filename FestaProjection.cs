@@ -101,7 +101,7 @@ internal static class FestaProjection
                         };
                         var shining = support is not null && friendship >= 80 && support.CanTriggerFriendshipTraining(BaseTrainIds[index])
                             || groupEffect != 0 && chara.chara_effect_id_array?.Contains(groupEffect) == true;
-                        return new FestaPartner(targetId, charaId, member?.act_type ?? 0, name, friendship,
+                        return new FestaPartner(targetId, charaId, member?.act_type ?? 0, name, friendship, supportInfo is not null,
                             command.tips_event_partner_array?.Contains(targetId) == true,
                             support?.IsFriendCard == true, shining);
                     }).OrderBy(x => supportCards.ContainsKey(x.TargetId) ? 0 : 1).ToImmutableArray();
