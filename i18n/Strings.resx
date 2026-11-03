@@ -16,16 +16,13 @@
     <value>{0} 无法保留历史记录：{1}。</value>
   </data>
   <data name="HistoryUnread" xml:space="preserve">
-    <value>有新的训练历史。按 → 查看最新。</value>
+    <value>有新的训练历史。右键或按 → 查看最新。</value>
   </data>
   <data name="HistoryNoUiSession" xml:space="preserve">
     <value>{0} 无法从非界面线程启动配置：当前没有正在运行的 Terminal.Gui 会话。</value>
   </data>
   <data name="HistoryCannotShowRetained" xml:space="preserve">
     <value>{0} 无法显示保留的历史记录：{1}。</value>
-  </data>
-  <data name="HistoryPosition" xml:space="preserve">
-    <value>训练历史 {0}/{1}</value>
   </data>
   <data name="HistoryCannotShowSelected" xml:space="preserve">
     <value>{0} 无法显示选中的历史记录：{1}。</value>
@@ -164,5 +161,14 @@
   </data>
   <data name="TrainingGainLabel" xml:space="preserve">
     <value>属:</value>
+  </data>
+  <data name="HistoryPreview" xml:space="preserve">
+    <value>训练历史 {0}/{1} · 预览</value>
+  </data>
+  <data name="HistoryConfirmed" xml:space="preserve">
+    <value>训练历史 {0}/{1} · 已确认</value>
+  </data>
+  <data name="HistoryNewest" xml:space="preserve">
+    <value>训练历史 {0}/{1} · 最新</value>
   </data>
 </root>
