@@ -24,10 +24,10 @@ TABLES = (
     "single_mode_15_schedule",
 )
 TEXT_CATEGORIES = (458, 461, 462, 463, 466)
-ACT_NAMES = {1: "流镝马", 2: "神旗争夺战", 3: "纳舞", 4: "大曳神舆", 5: "飞驱"}
+ACT_NAMES = {1: "流镝马", 2: "神旗争夺战", 3: "纳舞", 4: "大曳神舆", 5: "飞悬"}
 ADVICE_NAMES = {
-    101: "羁绊教诲", 201: "得意率教诲", 301: "提示教诲", 401: "助力教诲", 501: "体力教诲",
-    601: "专精教诲", 701: "研钻教诲", 801: "协力教诲", 901: "不屈教诲", 1001: "两道教诲",
+    101: "牵绊教诲", 201: "擅长率教诲", 301: "灵感教诲", 401: "助力教诲", 501: "体力教诲",
+    601: "特化教诲", 701: "研习教诲", 801: "协助教诲", 901: "不屈教诲", 1001: "兼修教诲",
 }
 ERRORS = {
     "UnknownAct": "未知的骏大祭演目编号。",
@@ -57,11 +57,11 @@ def advice_text(advice_id, rows):
         assert kinds == expected[advice_id], (advice_id, kinds)
     if advice_id == 101:
         assert value(rows, 16) == 3
-        return f"训练时全部编成支援卡的羁绊 +3（不叠加）\n演目稽古的主属性增长 +{value(rows, 13)}%"
+        return f"训练时全部编成支援卡的牵绊 +3（不叠加）\n演目稽古的主属性增长 +{value(rows, 13)}%"
     if advice_id == 201:
-        return f"得意率 +{value(rows, 4)}"
+        return f"擅长率 +{value(rows, 4)}"
     if advice_id == 301:
-        return f"提示发生率 +{value(rows, 2)}%"
+        return f"灵感发生率 +{value(rows, 2)}%"
     if advice_id == 401:
         assert value(rows, 20) == 47
         return f"未发生友情训练时，训练效果 +{value(rows, 203)}%\n演目稽古获得“助力支撑”（训练效果 +5%，最多生效 3 次）"
@@ -94,9 +94,9 @@ def fusion_text(advice_id, rows):
     if advice_id == 101:
         return f"演目稽古的主属性增长 +{value(rows, 13)}%\n合宿中，该演目的编成支援卡额外有 {value(rows, 17)} 人参加训练"
     if advice_id == 201:
-        return f"得意率 +{value(rows, 4)}\n演目稽古的友情加成 {value(rows, 202)}%"
+        return f"擅长率 +{value(rows, 4)}\n演目稽古的友情加成 {value(rows, 202)}%"
     if advice_id == 301:
-        return f"提示发生率 +{value(rows, 2)}%\n演目稽古的提示事件所获提示等级 +{value(rows, 19)}"
+        return f"灵感发生率 +{value(rows, 2)}%\n演目稽古的灵感事件所获灵感等级 +{value(rows, 19)}"
     if advice_id == 401:
         assert value(rows, 20) == 47
         return f"未发生友情训练时，训练效果 +{value(rows, 203)}%\n演目稽古获得“助力支撑”（训练效果 +5%，最多生效 3 次）"
@@ -112,8 +112,8 @@ def act_text(row):
         105: f"基础属性增长 +{amount}",
         202: f"友情加成 {amount}%",
         201: f"技能点训练效果 +{amount}%",
-        106: "除友人、团队卡外，全部编成支援卡出现提示事件",
-        107: "所选训练的全部提示事件效果生效",
+        106: "除友人、团队卡外，全部编成支援卡出现灵感事件",
+        107: "所选训练的全部灵感事件效果生效",
         109: f"技能点单次获取上限 +{amount}",
         206: f"基础属性单次获取上限 +{amount}",
     }
