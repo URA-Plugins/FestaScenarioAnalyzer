@@ -5,15 +5,15 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <DefaultItemExcludes>$(DefaultItemExcludes);artifacts\**</DefaultItemExcludes>
-    <Version>2026.11.1</Version>
+    <Version>2026.11.4</Version>
     <PluginInternalName>FestaScenarioAnalyzer</PluginInternalName>
     <PluginDisplayName>骏大祭分析</PluginDisplayName>
     <PluginAuthor>UmamusumeResponseAnalyzer</PluginAuthor>
     <PluginDescription>解析骏大祭回合训练信息</PluginDescription>
     <PluginRepositoryUrl>https://github.com/URA-Plugins/FestaScenarioAnalyzer</PluginRepositoryUrl>
-    <PluginChangelog>提供附加内容接口，与 EventLogger 联动并保存逐回合历史。</PluginChangelog>
+    <PluginChangelog>新增助力支撑、追加稽古标记与教诲/转成面板，稽古标题显示演目等级，译名对齐官方中文。</PluginChangelog>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="UmamusumeResponseAnalyzer" Version="*" PrivateAssets="all" />
+    <PackageReference Include="UmamusumeResponseAnalyzer" Version="2026.11.4" PrivateAssets="all" />
   </ItemGroup>
 </Project>

@@ -109,7 +109,9 @@ internal static class FestaProjection
                         command.is_enable == 1, command.failure_rate,
                         [.. Enumerable.Range(0, 5).Select(i => Revise(stats[i] + values[i + 1]) - Revise(stats[i]))],
                         values[30], Math.Clamp(chara.vital + values[10], 0, chara.max_vital), partners,
-                        [.. (scenario?.predict_gain_act_gauge_array ?? []).Select(x => new FestaGaugeGain(x.act_type, x.gain_act_gauge))]));
+                        [.. (scenario?.predict_gain_act_gauge_array ?? []).Select(x => new FestaGaugeGain(x.act_type, x.gain_act_gauge))],
+                        // 追加稽古掷中标记挂在训练位（command）上，与游戏内该位的角标同源。
+                        scenario?.is_upper_training_event_occurred == true));
                 }
                 training = [.. result.GroupBy(item => item.Index).OrderBy(group => group.Key).Select(group =>
                     group.SingleOrDefault(item => item.IsActTraining && item.IsEnabled)
@@ -120,7 +122,8 @@ internal static class FestaProjection
 
         return new(chara.single_mode_chara_id, chara.turn, chara.vital, chara.max_vital, chara.motivation, chara.skill_point,
             [.. stats.Select(Revise)], [.. maxStats.Select(Revise)],
-            data.festa_info?.max_act_level ?? 0, data.festa_info?.summer_camp_remain_turn_num ?? 0, supportTypeCount,
+            data.festa_info?.max_act_level ?? 0, data.festa_info?.summer_camp_remain_turn_num ?? 0,
+            home?.training_bonus_remain_turn_num ?? 0, supportTypeCount,
             [.. acts.OrderBy(x => x.act_type).Select(x => new FestaAct(x.act_type, x.level, x.act_gauge, x.need_act_gauge,
                 x.advice_id, x.advice_id == 0 ? 0 : advices[x.advice_id].fusion_advice_id, x.friend_outing_gain_act_level))],
             [.. advices.Values.Select(x => new FestaAdvice(x.advice_id, x.fusion_advice_id))], training,

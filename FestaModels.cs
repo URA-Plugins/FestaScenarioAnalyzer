@@ -5,7 +5,7 @@ namespace FestaScenarioAnalyzer;
 internal sealed record FestaTurn(
     int CharaId, int Turn, int Vital, int MaxVital, int Motivation, int SkillPoints,
     ImmutableArray<int> Stats, ImmutableArray<int> MaxStats,
-    int MaxActLevel, int CampRemaining, int SupportTypeCount,
+    int MaxActLevel, int CampRemaining, int AssistRemain, int SupportTypeCount,
     ImmutableArray<FestaAct> Acts, ImmutableArray<FestaAdvice> Advices,
     ImmutableArray<FestaTraining> Training, ImmutableArray<FestaCheckpointResult> Checkpoints,
     ImmutableArray<FestaGaugeCommand> OtherCommands,
@@ -17,7 +17,7 @@ internal sealed record FestaAdvice(int Id, int FusionId);
 internal sealed record FestaTraining(
     int Index, int CommandId, int Level, bool IsEnabled, int FailureRate,
     ImmutableArray<int> Gains, int PtGain, int VitalAfter,
-    ImmutableArray<FestaPartner> Partners, ImmutableArray<FestaGaugeGain> Gauges)
+    ImmutableArray<FestaPartner> Partners, ImmutableArray<FestaGaugeGain> Gauges, bool UpperTraining)
 {
     internal bool IsActTraining => CommandId is >= 5101 and <= 5105;
 }

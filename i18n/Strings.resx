@@ -91,7 +91,25 @@
     <value>{0}</value>
   </data>
   <data name="ActTrainingTitle" xml:space="preserve">
-    <value>{0}稽古</value>
+    <value>{0} Lv{1}</value>
+  </data>
+  <data name="AssistMark" xml:space="preserve">
+    <value>助力支撑</value>
+  </data>
+  <data name="KensanMark" xml:space="preserve">
+    <value>追加稽古</value>
+  </data>
+  <data name="AssistRemain" xml:space="preserve">
+    <value>助力支撑 剩余 {0} 次</value>
+  </data>
+  <data name="AdviceHeader" xml:space="preserve">
+    <value>教诲/转成</value>
+  </data>
+  <data name="AdviceNone" xml:space="preserve">
+    <value>—</value>
+  </data>
+  <data name="FusionArrow" xml:space="preserve">
+    <value>→</value>
   </data>
   <data name="Stat0" xml:space="preserve">
     <value>速度</value>
@@ -111,12 +129,6 @@
   <data name="CampRemaining" xml:space="preserve">
     <value>合宿剩余 {0} 回合</value>
   </data>
-  <data name="ActLevelGap" xml:space="preserve">
-    <value>{0}差{1}级</value>
-  </data>
-  <data name="NextCheckpoint" xml:space="preserve">
-    <value>第{0}回合目标：全演目Lv{1} · {2}</value>
-  </data>
   <data name="ListSeparator" xml:space="preserve">
     <value>、</value>
   </data>
@@ -128,9 +140,6 @@
   </data>
   <data name="NotLevelUpActs" xml:space="preserve">
     <value>本次未升级演目：{0}</value>
-  </data>
-  <data name="TrainingUnavailable" xml:space="preserve">
-    <value>当前不可执行</value>
   </data>
   <data name="TrainingPt" xml:space="preserve">
     <value>|Pt:{0}</value>

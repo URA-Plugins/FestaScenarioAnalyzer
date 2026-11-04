@@ -3,7 +3,7 @@ using System.Collections.Immutable;
 namespace FestaScenarioAnalyzer;
 
 public readonly record struct FestaTrainingDisplayId(int SingleModeCharaId, int Turn);
-public enum FestaDisplayColor { Normal, Cyan, Green, Yellow, Orange, Red }
+public enum FestaDisplayColor { Normal, Cyan, Green, Yellow, Orange, Red, Purple }
 public readonly record struct FestaDisplaySegment(string Text, FestaDisplayColor Color = FestaDisplayColor.Normal);
 public sealed record FestaDisplayLine(ImmutableArray<FestaDisplaySegment> Segments);
 
