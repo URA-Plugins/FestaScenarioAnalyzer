@@ -9,6 +9,12 @@ internal static class FestaProjection
 {
     internal static readonly int[] BaseTrainIds = [101, 105, 102, 103, 106];
 
+    /// <summary>状态 45：友人出行解锁后的一次性「疲劳回复」，消费后状态消失。</summary>
+    internal const int EffectFatigueRecovery = 45;
+
+    /// <summary>状态 47：助力支撑；剩余次数见 <c>home_info.training_bonus_remain_turn_num</c>。</summary>
+    internal const int EffectAssistSupport = 47;
+
     internal static int TrainIndex(int commandId) => commandId switch
     {
         101 or 601 or 5101 => 0,
@@ -43,8 +49,10 @@ internal static class FestaProjection
         var supportTypeCount = supports.Values.Any(x => x is null)
             ? -1
             : supports.Values.Select(x => x!.Type).Distinct().Count();
-        var members = (data.evaluation_info_array ?? []).ToDictionary(x => x.target_id);
+        var memberList = data.evaluation_info_array ?? [];
+        var members = memberList.ToDictionary(x => x.target_id);
         var friendships = (chara.evaluation_info_array ?? []).ToDictionary(x => x.target_id, x => x.evaluation);
+        var effectIds = chara.chara_effect_id_array ?? [];
 
         var training = ImmutableArray<FestaTraining>.Empty;
         if (canTrain && home?.command_info_array is { } homeCommands)
@@ -132,6 +140,8 @@ internal static class FestaProjection
                 [.. (x.predict_gain_act_gauge_array ?? []).Select(g => new FestaGaugeGain(g.act_type, g.gain_act_gauge))]))],
             data.not_up_parameter_info?.is_overflow_act_gauge_event_gain == true,
             data.not_up_parameter_info?.is_overflow_act_level_event_gain == true,
-            [.. data.not_up_parameter_info?.not_level_up_act_type_array ?? []], chara.playing_state != 1);
+            [.. data.not_up_parameter_info?.not_level_up_act_type_array ?? []], chara.playing_state != 1,
+            [.. memberList.Select(x => new FestaMember(x.target_id, x.chara_id, x.act_type))],
+            effectIds.Contains(EffectFatigueRecovery), effectIds.Contains(EffectAssistSupport));
     }
 }

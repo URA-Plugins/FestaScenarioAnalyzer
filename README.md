@@ -20,7 +20,11 @@
 
 `FestaTrainingDisplay.RegisterPartProducer(sourceTitle)` 返回可释放的生产者句柄。调用 `Update(FestaTrainingDisplayId, IReadOnlyList<FestaDisplayLine>)` 提交带颜色的不可变文本行；标识由 `SingleModeCharaId` 与 `Turn` 组成。接口只写附加区域，不能修改训练数据。Festa 复制行集合，历史按键保存快照；训练画面发布前最多暂存生产者最近一次更新，避免积累没有训练画面的回合。释放句柄删除该生产者的全部内容。
 
-EventLogger 对 Festa 单向软依赖，Festa 不引用 EventLogger。此接口对应两个插件的 `2026.11.1` 配套版本，须成对更新；单独安装任一插件可使用其自身功能。
+EventLogger 对 Festa 单向软依赖，Festa 不引用 EventLogger。此接口对应两个插件的 `2026.11.5` 配套版本，须成对更新；单独安装任一插件可使用其自身功能。
+
+## 跨插件状态快照
+
+`FestaScenarioState.Snapshot()` 返回最近一帧的不可变投影 `FestaTurn`（分析器每次成功投影后写入，卸载时清除）；消费方须校验 `CharaId` 与 `Turn` 与当前帧一致。该类型是跨插件公开契约，`SendGameStatusPlugin` 等消费方依赖它，增删字段须与消费方成对发布。`Members` 为协议 `evaluation_info_array` 原样投影（`target_id` 1 基）；`FatigueRecovery` / `AssistSupportActive` 分别对应状态 45 / 47，助力支撑剩余次数见 `AssistRemain`。
 
 配置通过 Host 的插件配置入口修改，点击“保存”才写入 `PluginData/FestaScenarioAnalyzer/settings.json`：
 
