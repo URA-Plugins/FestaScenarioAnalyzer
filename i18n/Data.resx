@@ -37,16 +37,16 @@
     <value>大曳神舆</value>
   </data>
   <data name="Act_5" xml:space="preserve">
-    <value>飞驱</value>
+    <value>飞悬</value>
   </data>
   <data name="Advice_101" xml:space="preserve">
-    <value>羁绊教诲</value>
+    <value>牵绊教诲</value>
   </data>
   <data name="Advice_201" xml:space="preserve">
-    <value>得意率教诲</value>
+    <value>擅长率教诲</value>
   </data>
   <data name="Advice_301" xml:space="preserve">
-    <value>提示教诲</value>
+    <value>灵感教诲</value>
   </data>
   <data name="Advice_401" xml:space="preserve">
     <value>助力教诲</value>
@@ -55,119 +55,119 @@
     <value>体力教诲</value>
   </data>
   <data name="Advice_601" xml:space="preserve">
-    <value>专精教诲</value>
+    <value>特化教诲</value>
   </data>
   <data name="Advice_701" xml:space="preserve">
-    <value>研钻教诲</value>
+    <value>研习教诲</value>
   </data>
   <data name="Advice_801" xml:space="preserve">
-    <value>协力教诲</value>
+    <value>协助教诲</value>
   </data>
   <data name="Advice_901" xml:space="preserve">
     <value>不屈教诲</value>
   </data>
   <data name="Advice_1001" xml:space="preserve">
-    <value>两道教诲</value>
+    <value>兼修教诲</value>
   </data>
   <data name="AdviceEffect_1" xml:space="preserve">
-    <value>训练时全部编成支援卡的羁绊 +3（不叠加）
+    <value>训练时全部编成支援卡的牵绊 +3（不叠加）
 演目稽古的主属性增长 +3%</value>
   </data>
   <data name="AdviceEffect_3" xml:space="preserve">
-    <value>训练时全部编成支援卡的羁绊 +3（不叠加）
+    <value>训练时全部编成支援卡的牵绊 +3（不叠加）
 演目稽古的主属性增长 +5%</value>
   </data>
   <data name="AdviceEffect_5" xml:space="preserve">
-    <value>训练时全部编成支援卡的羁绊 +3（不叠加）
+    <value>训练时全部编成支援卡的牵绊 +3（不叠加）
 演目稽古的主属性增长 +7%</value>
   </data>
   <data name="AdviceEffect_7" xml:space="preserve">
-    <value>训练时全部编成支援卡的羁绊 +3（不叠加）
+    <value>训练时全部编成支援卡的牵绊 +3（不叠加）
 演目稽古的主属性增长 +9%</value>
   </data>
   <data name="AdviceEffect_9" xml:space="preserve">
-    <value>训练时全部编成支援卡的羁绊 +3（不叠加）
+    <value>训练时全部编成支援卡的牵绊 +3（不叠加）
 演目稽古的主属性增长 +10%</value>
   </data>
   <data name="AdviceEffect_11" xml:space="preserve">
-    <value>训练时全部编成支援卡的羁绊 +3（不叠加）
+    <value>训练时全部编成支援卡的牵绊 +3（不叠加）
 演目稽古的主属性增长 +11%</value>
   </data>
   <data name="AdviceEffect_13" xml:space="preserve">
-    <value>训练时全部编成支援卡的羁绊 +3（不叠加）
+    <value>训练时全部编成支援卡的牵绊 +3（不叠加）
 演目稽古的主属性增长 +12%</value>
   </data>
   <data name="AdviceEffect_15" xml:space="preserve">
-    <value>训练时全部编成支援卡的羁绊 +3（不叠加）
+    <value>训练时全部编成支援卡的牵绊 +3（不叠加）
 演目稽古的主属性增长 +13%</value>
   </data>
   <data name="AdviceEffect_17" xml:space="preserve">
-    <value>训练时全部编成支援卡的羁绊 +3（不叠加）
+    <value>训练时全部编成支援卡的牵绊 +3（不叠加）
 演目稽古的主属性增长 +14%</value>
   </data>
   <data name="AdviceEffect_19" xml:space="preserve">
-    <value>训练时全部编成支援卡的羁绊 +3（不叠加）
+    <value>训练时全部编成支援卡的牵绊 +3（不叠加）
 演目稽古的主属性增长 +15%</value>
   </data>
   <data name="AdviceEffect_21" xml:space="preserve">
-    <value>得意率 +10</value>
+    <value>擅长率 +10</value>
   </data>
   <data name="AdviceEffect_22" xml:space="preserve">
-    <value>得意率 +13</value>
+    <value>擅长率 +13</value>
   </data>
   <data name="AdviceEffect_23" xml:space="preserve">
-    <value>得意率 +16</value>
+    <value>擅长率 +16</value>
   </data>
   <data name="AdviceEffect_24" xml:space="preserve">
-    <value>得意率 +20</value>
+    <value>擅长率 +20</value>
   </data>
   <data name="AdviceEffect_25" xml:space="preserve">
-    <value>得意率 +25</value>
+    <value>擅长率 +25</value>
   </data>
   <data name="AdviceEffect_26" xml:space="preserve">
-    <value>得意率 +30</value>
+    <value>擅长率 +30</value>
   </data>
   <data name="AdviceEffect_27" xml:space="preserve">
-    <value>得意率 +35</value>
+    <value>擅长率 +35</value>
   </data>
   <data name="AdviceEffect_28" xml:space="preserve">
-    <value>得意率 +40</value>
+    <value>擅长率 +40</value>
   </data>
   <data name="AdviceEffect_29" xml:space="preserve">
-    <value>得意率 +45</value>
+    <value>擅长率 +45</value>
   </data>
   <data name="AdviceEffect_30" xml:space="preserve">
-    <value>得意率 +50</value>
+    <value>擅长率 +50</value>
   </data>
   <data name="AdviceEffect_31" xml:space="preserve">
-    <value>提示发生率 +30%</value>
+    <value>灵感发生率 +30%</value>
   </data>
   <data name="AdviceEffect_32" xml:space="preserve">
-    <value>提示发生率 +33%</value>
+    <value>灵感发生率 +33%</value>
   </data>
   <data name="AdviceEffect_33" xml:space="preserve">
-    <value>提示发生率 +36%</value>
+    <value>灵感发生率 +36%</value>
   </data>
   <data name="AdviceEffect_34" xml:space="preserve">
-    <value>提示发生率 +40%</value>
+    <value>灵感发生率 +40%</value>
   </data>
   <data name="AdviceEffect_35" xml:space="preserve">
-    <value>提示发生率 +45%</value>
+    <value>灵感发生率 +45%</value>
   </data>
   <data name="AdviceEffect_36" xml:space="preserve">
-    <value>提示发生率 +50%</value>
+    <value>灵感发生率 +50%</value>
   </data>
   <data name="AdviceEffect_37" xml:space="preserve">
-    <value>提示发生率 +55%</value>
+    <value>灵感发生率 +55%</value>
   </data>
   <data name="AdviceEffect_38" xml:space="preserve">
-    <value>提示发生率 +60%</value>
+    <value>灵感发生率 +60%</value>
   </data>
   <data name="AdviceEffect_39" xml:space="preserve">
-    <value>提示发生率 +70%</value>
+    <value>灵感发生率 +70%</value>
   </data>
   <data name="AdviceEffect_40" xml:space="preserve">
-    <value>提示发生率 +80%</value>
+    <value>灵感发生率 +80%</value>
   </data>
   <data name="AdviceEffect_41" xml:space="preserve">
     <value>未发生友情训练时，训练效果 +20%
@@ -427,12 +427,12 @@
 合宿中，该演目的编成支援卡额外有 1 人参加训练</value>
   </data>
   <data name="FusionEffect_3" xml:space="preserve">
-    <value>得意率 +50
+    <value>擅长率 +50
 演目稽古的友情加成 10%</value>
   </data>
   <data name="FusionEffect_5" xml:space="preserve">
-    <value>提示发生率 +80%
-演目稽古的提示事件所获提示等级 +1</value>
+    <value>灵感发生率 +80%
+演目稽古的灵感事件所获灵感等级 +1</value>
   </data>
   <data name="FusionEffect_7" xml:space="preserve">
     <value>未发生友情训练时，训练效果 +20%
@@ -454,7 +454,7 @@
     <value>支援卡类型至少 5 种：技能点训练效果 +20%</value>
   </data>
   <data name="ActEffect_5" xml:space="preserve">
-    <value>支援卡类型至少 5 种：除友人、团队卡外，全部编成支援卡出现提示事件</value>
+    <value>支援卡类型至少 5 种：除友人、团队卡外，全部编成支援卡出现灵感事件</value>
   </data>
   <data name="ActEffect_6" xml:space="preserve">
     <value>对应演目担当参加演目稽古</value>
@@ -469,7 +469,7 @@
     <value>支援卡类型至少 5 种：技能点训练效果 +25%</value>
   </data>
   <data name="ActEffect_10" xml:space="preserve">
-    <value>支援卡类型至少 5 种：除友人、团队卡外，全部编成支援卡出现提示事件</value>
+    <value>支援卡类型至少 5 种：除友人、团队卡外，全部编成支援卡出现灵感事件</value>
   </data>
   <data name="ActEffect_11" xml:space="preserve">
     <value>对应演目担当参加演目稽古</value>
@@ -484,7 +484,7 @@
     <value>支援卡类型至少 5 种：技能点训练效果 +30%</value>
   </data>
   <data name="ActEffect_15" xml:space="preserve">
-    <value>支援卡类型至少 5 种：除友人、团队卡外，全部编成支援卡出现提示事件</value>
+    <value>支援卡类型至少 5 种：除友人、团队卡外，全部编成支援卡出现灵感事件</value>
   </data>
   <data name="ActEffect_16" xml:space="preserve">
     <value>对应演目担当参加演目稽古</value>
@@ -499,10 +499,10 @@
     <value>支援卡类型至少 5 种：技能点训练效果 +40%</value>
   </data>
   <data name="ActEffect_20" xml:space="preserve">
-    <value>支援卡类型至少 5 种：除友人、团队卡外，全部编成支援卡出现提示事件</value>
+    <value>支援卡类型至少 5 种：除友人、团队卡外，全部编成支援卡出现灵感事件</value>
   </data>
   <data name="ActEffect_21" xml:space="preserve">
-    <value>支援卡类型至少 5 种：所选训练的全部提示事件效果生效</value>
+    <value>支援卡类型至少 5 种：所选训练的全部灵感事件效果生效</value>
   </data>
   <data name="ActEffect_22" xml:space="preserve">
     <value>支援卡类型至少 5 种：技能点单次获取上限 +10</value>
@@ -520,10 +520,10 @@
     <value>支援卡类型至少 5 种：技能点训练效果 +50%</value>
   </data>
   <data name="ActEffect_27" xml:space="preserve">
-    <value>支援卡类型至少 5 种：除友人、团队卡外，全部编成支援卡出现提示事件</value>
+    <value>支援卡类型至少 5 种：除友人、团队卡外，全部编成支援卡出现灵感事件</value>
   </data>
   <data name="ActEffect_28" xml:space="preserve">
-    <value>支援卡类型至少 5 种：所选训练的全部提示事件效果生效</value>
+    <value>支援卡类型至少 5 种：所选训练的全部灵感事件效果生效</value>
   </data>
   <data name="ActEffect_29" xml:space="preserve">
     <value>支援卡类型至少 5 种：技能点单次获取上限 +20</value>
@@ -541,10 +541,10 @@
     <value>支援卡类型至少 5 种：技能点训练效果 +60%</value>
   </data>
   <data name="ActEffect_34" xml:space="preserve">
-    <value>支援卡类型至少 5 种：除友人、团队卡外，全部编成支援卡出现提示事件</value>
+    <value>支援卡类型至少 5 种：除友人、团队卡外，全部编成支援卡出现灵感事件</value>
   </data>
   <data name="ActEffect_35" xml:space="preserve">
-    <value>支援卡类型至少 5 种：所选训练的全部提示事件效果生效</value>
+    <value>支援卡类型至少 5 种：所选训练的全部灵感事件效果生效</value>
   </data>
   <data name="ActEffect_36" xml:space="preserve">
     <value>支援卡类型至少 5 种：技能点单次获取上限 +30</value>
@@ -562,10 +562,10 @@
     <value>支援卡类型至少 5 种：技能点训练效果 +80%</value>
   </data>
   <data name="ActEffect_41" xml:space="preserve">
-    <value>支援卡类型至少 5 种：除友人、团队卡外，全部编成支援卡出现提示事件</value>
+    <value>支援卡类型至少 5 种：除友人、团队卡外，全部编成支援卡出现灵感事件</value>
   </data>
   <data name="ActEffect_42" xml:space="preserve">
-    <value>支援卡类型至少 5 种：所选训练的全部提示事件效果生效</value>
+    <value>支援卡类型至少 5 种：所选训练的全部灵感事件效果生效</value>
   </data>
   <data name="ActEffect_43" xml:space="preserve">
     <value>支援卡类型至少 5 种：技能点单次获取上限 +50</value>
@@ -583,10 +583,10 @@
     <value>支援卡类型至少 5 种：技能点训练效果 +100%</value>
   </data>
   <data name="ActEffect_48" xml:space="preserve">
-    <value>支援卡类型至少 5 种：除友人、团队卡外，全部编成支援卡出现提示事件</value>
+    <value>支援卡类型至少 5 种：除友人、团队卡外，全部编成支援卡出现灵感事件</value>
   </data>
   <data name="ActEffect_49" xml:space="preserve">
-    <value>支援卡类型至少 5 种：所选训练的全部提示事件效果生效</value>
+    <value>支援卡类型至少 5 种：所选训练的全部灵感事件效果生效</value>
   </data>
   <data name="ActEffect_50" xml:space="preserve">
     <value>支援卡类型至少 5 种：技能点单次获取上限 +100</value>
@@ -604,10 +604,10 @@
     <value>支援卡类型至少 5 种：技能点训练效果 +135%</value>
   </data>
   <data name="ActEffect_55" xml:space="preserve">
-    <value>支援卡类型至少 5 种：除友人、团队卡外，全部编成支援卡出现提示事件</value>
+    <value>支援卡类型至少 5 种：除友人、团队卡外，全部编成支援卡出现灵感事件</value>
   </data>
   <data name="ActEffect_56" xml:space="preserve">
-    <value>支援卡类型至少 5 种：所选训练的全部提示事件效果生效</value>
+    <value>支援卡类型至少 5 种：所选训练的全部灵感事件效果生效</value>
   </data>
   <data name="ActEffect_57" xml:space="preserve">
     <value>支援卡类型至少 5 种：基础属性单次获取上限 +20</value>
@@ -628,10 +628,10 @@
     <value>支援卡类型至少 5 种：技能点训练效果 +170%</value>
   </data>
   <data name="ActEffect_63" xml:space="preserve">
-    <value>支援卡类型至少 5 种：除友人、团队卡外，全部编成支援卡出现提示事件</value>
+    <value>支援卡类型至少 5 种：除友人、团队卡外，全部编成支援卡出现灵感事件</value>
   </data>
   <data name="ActEffect_64" xml:space="preserve">
-    <value>支援卡类型至少 5 种：所选训练的全部提示事件效果生效</value>
+    <value>支援卡类型至少 5 种：所选训练的全部灵感事件效果生效</value>
   </data>
   <data name="ActEffect_65" xml:space="preserve">
     <value>支援卡类型至少 5 种：基础属性单次获取上限 +25</value>

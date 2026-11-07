@@ -88,6 +88,7 @@ public sealed class FestaScenarioAnalyzer : IPlugin
             var snapshot = FestaProjection.Create(chara, response.Home, response.Data,
                 chara.playing_state == 1 && response.Events is not { Length: > 0 } && !response.Racing);
             Latest = snapshot;
+            FestaScenarioState.Update(snapshot);
             if (snapshot.Training.IsEmpty)
                 return ValueTask.CompletedTask;
             key = new FestaDisplayHistory.Key(snapshot.CharaId, snapshot.Turn);
@@ -135,6 +136,7 @@ public sealed class FestaScenarioAnalyzer : IPlugin
             active = false;
             snapshots.Clear();
             Latest = null;
+            FestaScenarioState.Clear();
             currentCharaId = 0;
             target = workspace;
             workspace = null;

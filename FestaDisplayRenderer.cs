@@ -16,7 +16,35 @@ namespace FestaScenarioAnalyzer;
 internal static class FestaDisplayRenderer
 {
     public static WorkspaceContent Render(FestaTurn turn, ImmutableArray<FestaDisplayLine> extra)
-        => new(() => new Dashboard(turn, extra));
+        => new(() => new Dashboard(turn, [.. AdviceRows(turn), .. extra]));
+
+    // 右侧面板的教诲分配：每种训练一行，形如「速度 牵绊→特化」；尚未转成时只列教诲。
+    // 行首用基础训练的简称（速/耐/力/根/智所在训练的二字名），不用演目名，便于和训练列对上。
+    static IEnumerable<FestaDisplayLine> AdviceRows(FestaTurn turn)
+    {
+        if (turn.Acts.IsEmpty)
+            yield break;
+        yield return new([new FestaDisplaySegment(FestaText.Get("AdviceHeader"), FestaDisplayColor.Cyan)]);
+        foreach (var act in turn.Acts.OrderBy(act => act.Type))
+        {
+            List<FestaDisplaySegment> segments =
+            [
+                new(FestaText.Get("Stat" + (act.Type - 1)), FestaDisplayColor.Cyan), new(" ")
+            ];
+            if (act.AdviceId == 0 || !FestaMasterData.TryAdviceShortName(act.AdviceId, out var advice))
+                segments.Add(new(FestaText.Get("AdviceNone")));
+            else
+            {
+                segments.Add(new(advice));
+                if (act.FusionId != 0 && FestaMasterData.TryAdviceShortName(act.FusionId, out var fusion))
+                {
+                    segments.Add(new(FestaText.Get("FusionArrow")));
+                    segments.Add(new(fusion, FestaDisplayColor.Green));
+                }
+            }
+            yield return new([.. segments]);
+        }
+    }
 
     internal static bool TryScroll(View view, Command command)
         => view is Dashboard dashboard && dashboard.Scroll(command);
@@ -26,6 +54,7 @@ internal static class FestaDisplayRenderer
         const int CardWidth = 19;
         const int MainWidth = CardWidth * 5;
         const int InnerWidth = CardWidth - 3;
+        const int AssistAdvice = 401;
         readonly Palette palette;
         readonly UiLine[] extraRows;
         readonly FrameView? extras;
@@ -80,7 +109,9 @@ internal static class FestaDisplayRenderer
             // Keep section separators aligned across all five cards.
             var heights = Enumerable.Range(0, 3)
                 .Select(group => cards.Max(card => RowsHeight(card.Groups[group], InnerWidth))).ToArray();
-            var cardHeight = heights.Sum() + 7;
+            // 标记行五列共用：本回合任意一列有标记时整行保留，未标记的列留空以维持分组线对齐。
+            var markRows = cards.Max(card => card.Marks.Count);
+            var cardHeight = heights.Sum() + 7 + markRows;
             foreach (var card in cards)
             {
                 var id = "festa-training:" + card.Training.CommandId;
@@ -92,8 +123,15 @@ internal static class FestaDisplayRenderer
                 if (card.Training.Partners.Any(partner => partner.Shining))
                     frame.Border.GetOrCreateView().SetScheme(palette.Selected);
                 frame.Add(CreateText([card.Title], Pos.Align(Alignment.Center), 0, card.Title.Text.GetColumns(), 1));
-                frame.Add(new Line { Id = id + ":separator:0", X = 1, Y = 1, Width = InnerWidth });
-                var row = 2;
+                var row = 1;
+                if (card.Marks.Count > 0)
+                {
+                    var marks = CreateText(card.Marks, 1, row, InnerWidth, card.Marks.Count);
+                    marks.Id = id + ":marks";
+                    frame.Add(marks);
+                }
+                row += markRows;
+                frame.Add(new Line { Id = id + ":separator:0", X = 1, Y = row++, Width = InnerWidth });
                 var sections = new[] { "capacity", "cost", "gain" };
                 for (var group = 0; group < card.Groups.Length; group++)
                 {
@@ -135,16 +173,8 @@ internal static class FestaDisplayRenderer
             var rows = new List<UiLine>();
             if (turn.CampRemaining > 0)
                 rows.Add(new(FestaText.Get("CampRemaining", turn.CampRemaining), UiColor.Cyan));
-            var next = FestaMasterData.Schedules.FirstOrDefault(schedule =>
-                schedule.Turn >= turn.Turn && !turn.Checkpoints.Any(result => result.Id == schedule.Id));
-            if (next is not null)
-            {
-                var missing = turn.Acts.Where(act => act.Level < next.NeedLevel)
-                    .Select(act => FestaText.Get("ActLevelGap", FestaMasterData.ActName(act.Type), next.NeedLevel - act.Level)).ToArray();
-                if (missing.Length > 0)
-                    rows.Add(new(FestaText.Get("NextCheckpoint", next.Turn, next.NeedLevel,
-                        string.Join(FestaText.Get("ListSeparator"), missing)), UiColor.Cyan));
-            }
+            if (turn.AssistRemain > 0)
+                rows.Add(new(FestaText.Get("AssistRemain", turn.AssistRemain), UiColor.Yellow));
             if (turn.GaugeOverflow)
                 rows.Add(new(FestaText.Get("GaugeOverflow"), UiColor.Yellow));
             if (turn.LevelOverflow)
@@ -157,9 +187,14 @@ internal static class FestaDisplayRenderer
 
         static TrainingCard CreateCard(FestaTurn turn, FestaTraining training, int maxGain)
         {
+            var act = training.IsActTraining
+                ? turn.Acts.FirstOrDefault(act => act.Type == training.Index + 1)
+                : null;
             var title = new List<TextRun>
             {
-                new(FestaText.Get(training.IsActTraining ? "ActTrainingTitle" : "TrainingTitle", FestaText.Get("Stat" + training.Index)))
+                act is null
+                    ? new(FestaText.Get("TrainingTitle", FestaText.Get("Stat" + training.Index)))
+                    : new(FestaText.Get("ActTrainingTitle", FestaMasterData.ActShortName(act.Type), act.Level), UiColor.Cyan)
             };
             if (training.FailureRate > 0)
                 title.Add(new(FestaText.Get("FailureRate", training.FailureRate), UiColor.Red));
@@ -173,8 +208,6 @@ internal static class FestaDisplayRenderer
                     new(remaining.ToString(), remaining <= 200 ? UiColor.Red : remaining <= 400 ? UiColor.Yellow : UiColor.Normal)
                 ])
             };
-            if (!training.IsEnabled)
-                capacity.Add(new(FestaText.Get("TrainingUnavailable"), UiColor.Red));
             var cost = new List<UiLine>
             {
                 new([
@@ -210,7 +243,36 @@ internal static class FestaDisplayRenderer
             }
             for (var i = training.Partners.Length; i < 5; i++)
                 gains.Add(new(string.Empty));
-            return new(training, new(title), [[.. capacity], [.. cost], [.. gains]]);
+            var marks = new List<TextRun>();
+            if (training.IsActTraining && CanTriggerAssist(turn, training))
+                marks.Add(new(FestaText.Get("AssistMark"), UiColor.Yellow));
+            if (training.UpperTraining)
+                marks.Add(new(FestaText.Get("KensanMark"), UiColor.Purple));
+            return new(training, new(title), MarkRows(marks, InnerWidth), [[.. capacity], [.. cost], [.. gains]]);
+        }
+
+        // 助力教诲的固定转成效果同样给出「助力支撑」，两种来源都算绑定。
+        static bool CanTriggerAssist(FestaTurn turn, FestaTraining training)
+        {
+            var acts = turn.Acts.Where(act => act.AdviceId == AssistAdvice || act.FusionId == AssistAdvice)
+                .Select(act => act.Type).ToHashSet();
+            return acts.Count > 0 && training.Partners.Any(partner => acts.Contains(partner.ActType));
+        }
+
+        // 两个标记优先并排；卡内宽度容不下时拆成两行，宁可多占一行也不把名称从中间折开。
+        static IReadOnlyList<UiLine> MarkRows(IReadOnlyList<TextRun> marks, int width)
+        {
+            if (marks.Count == 0)
+                return [];
+            var columns = marks.Sum(mark => mark.Text.GetColumns()) + marks.Count - 1;
+            if (columns <= width)
+            {
+                var runs = new List<TextRun> { marks[0] };
+                for (var i = 1; i < marks.Count; i++)
+                    runs.AddRange([new TextRun(" "), marks[i]]);
+                return [new(runs)];
+            }
+            return [.. marks.Select(mark => new UiLine([mark]))];
         }
 
         protected override void OnSubViewLayout(LayoutEventArgs args)
@@ -294,7 +356,7 @@ internal static class FestaDisplayRenderer
         }
     }
 
-    sealed record TrainingCard(FestaTraining Training, UiLine Title, UiLine[][] Groups);
+    sealed record TrainingCard(FestaTraining Training, UiLine Title, IReadOnlyList<UiLine> Marks, UiLine[][] Groups);
 
     static int RowsHeight(IReadOnlyList<UiLine> rows, int width)
         => WrapRows(rows, width).Count();
@@ -407,6 +469,7 @@ internal static class FestaDisplayRenderer
             UiColor.Yellow => new TColor(StandardColor.BrightYellow),
             UiColor.Orange => new TColor(255, 140, 0),
             UiColor.Red => new TColor(StandardColor.BrightRed),
+            UiColor.Purple => new TColor(190, 120, 255),
             _ => Normal.Foreground
         }, TColor.Black, Normal.Style);
     }
